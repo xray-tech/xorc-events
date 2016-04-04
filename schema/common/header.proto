@@ -1,7 +1,6 @@
 package d360.common;
 
 message Header {
-    optional string name = 1;
     optional int64 created_at = 2;
     optional string source = 3;
 }
