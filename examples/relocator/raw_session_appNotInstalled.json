@@ -1,0 +1,723 @@
+{
+  "_id": {
+    "$id": "5702302ad52f43587e87441e"
+  },
+  "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+  "spec:relocator:updates:checksums": [
+    "8241e0b97133874acde55bda587b1752",
+    "be3759a6768c5d9c9067cd331598bdb9",
+    "548278f17f4f8052181a4bbc35ef9e86",
+    "a3b58680173aa986e81c7b1ef4a8820e",
+    "b383fbec76d765020ddc20998d7a9e50",
+    "30692ccc474826458a75a78d2e82bbb4",
+    "d004d3182c43836cdbb78c05d6259ff2",
+    "8abe93df349b7c5d0b99f04c539ab920",
+    "c23964e42bd0b53f7e0ee60cdeeed9fc"
+  ],
+  "events": {
+    "0": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:47.272Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4"
+    },
+    "1": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:47.456Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+      "payload": {
+        "customer": "hrs",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-2",
+        "execution:proxy:external:host:name": "apps-a-2",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 197,
+        "spec:relocator:relocationMethod": "",
+        "spec:relocator:relocationStep": "entry",
+        "request:time:epoch": 1459761167.4338,
+        "request:time": "2016-04-04T09:12:47.433Z",
+        "request:id": "z2Ye2xBAiNZdDXoP3",
+        "request:server:httpHost": "smartlink.hrs.de",
+        "request:uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761167397&method=&name=pageRendered&step=entry&vs=visible",
+        "request:clientIp": "94.220.36.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "cA6knwf",
+        "execution:profiler:time:toFlush:microseconds": 23329
+      }
+    },
+    "2": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-14111656",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:47.559Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4"
+    },
+    "3": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-14111656",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:47.876Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+      "payload": {
+        "customer": "hrs",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-1",
+        "execution:proxy:external:host:name": "apps-a-1",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 613,
+        "spec:relocator:relocationMethod": "L",
+        "spec:relocator:relocationStep": "1",
+        "spec:relocator:stepOne:renderedAt:timestamp:clientSide:milliseconds": 1459761167824,
+        "request:time:epoch": 1459761167.8495,
+        "request:time": "2016-04-04T09:12:47.849Z",
+        "request:id": "I8rgq8n4gOWRPj248",
+        "request:server:httpHost": "smartlink.hrs.de",
+        "request:uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761167824&method=L&name=pageRendered&step=1&vs=visible",
+        "request:clientIp": "94.220.36.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "cA6knwf",
+        "execution:profiler:time:toFlush:microseconds": 28364
+      }
+    },
+    "4": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:50.011Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4"
+    },
+    "5": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:50.164Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+      "payload": {
+        "customer": "hrs",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-2",
+        "execution:proxy:external:host:name": "apps-a-2",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 2906,
+        "spec:relocator:relocationMethod": "L",
+        "spec:relocator:relocationStep": "2",
+        "request:time:epoch": 1459761170.1428,
+        "request:time": "2016-04-04T09:12:50.142Z",
+        "request:id": "1qsjzIK3l9oAONr78",
+        "request:server:httpHost": "smartlink.hrs.de",
+        "request:uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761170121&method=L&name=pageRendered&step=2&vs=visible",
+        "request:clientIp": "94.220.36.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "cA6knwf",
+        "execution:profiler:time:toFlush:microseconds": 22866
+      }
+    },
+    "6": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:51.676Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+      "payload": {
+        "customer": "hrs",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-2",
+        "execution:proxy:external:host:name": "apps-a-2",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 4418,
+        "spec:relocator:relocationMethod": "",
+        "spec:relocator:relocationStep": "appNotInstalled",
+        "request:time:epoch": 1459761171.6549,
+        "request:time": "2016-04-04T09:12:51.654Z",
+        "request:id": "EECn6uETnfjlqRKl9",
+        "request:server:httpHost": "smartlink.hrs.de",
+        "request:uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761171630&method=&name=pageRendered&step=appNotInstalled&vs=visible",
+        "request:clientIp": "94.220.36.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "cA6knwf",
+        "execution:profiler:time:toFlush:microseconds": 23123
+      }
+    },
+    "7": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:eventLogger",
+      "name": "redirectToDestinationUrl",
+      "time": "2016-04-04T09:12:51.678Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4",
+      "payload": {
+        "customer": "hrs",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-2",
+        "execution:proxy:external:host:name": "apps-a-2",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 4421,
+        "spec:relocator:relocationMethod": "L",
+        "spec:relocator:relocationStep": "appInstalled",
+        "request:time:epoch": 1459761171.6578,
+        "request:time": "2016-04-04T09:12:51.657Z",
+        "request:id": "jl4sfZpaMFakT2DJa",
+        "request:server:httpHost": "smartlink.hrs.de",
+        "request:uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761171635&method=L&name=redirectToDestinationUrl&step=appInstalled",
+        "request:clientIp": "94.220.36.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "cA6knwf",
+        "execution:profiler:time:toFlush:microseconds": 21950
+      }
+    },
+    "8": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-14111656",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:51.521Z",
+      "spec:relocator:rSID": "6A5CQJeJjdeflSMB4"
+    }
+  },
+  "pagesRendered": [
+    {
+      "time": "2016-04-04T09:12:47.876Z",
+      "page": "relocation-1",
+      "uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761167824&method=L&name=pageRendered&step=1&vs=visible"
+    },
+    {
+      "time": "2016-04-04T09:12:47.456Z",
+      "page": "relocation-entry",
+      "uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761167397&method=&name=pageRendered&step=entry&vs=visible"
+    },
+    {
+      "time": "2016-04-04T09:12:50.164Z",
+      "page": "relocation-2",
+      "uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761170121&method=L&name=pageRendered&step=2&vs=visible"
+    },
+    {
+      "time": "2016-04-04T09:12:51.676Z",
+      "page": "relocation-appNotInstalled",
+      "uri": "http://smartlink.hrs.de/cA6knwf/eventLogger?ct=1459761171630&method=&name=pageRendered&step=appNotInstalled&vs=visible"
+    }
+  ],
+  "log": {
+    "0": {
+      "time": "2016-04-04T09:12:47.254Z",
+      "msg": "relocationEntryStepAction:enter",
+      "cnt": 1,
+      "data": {
+        "dataIn": "cA6knwf"
+      }
+    },
+    "1": {
+      "time": "2016-04-04T09:12:47.258Z",
+      "msg": "relocatorSession:initiateSession:enter",
+      "cnt": 2
+    },
+    "2": {
+      "time": "2016-04-04T09:12:47.259Z",
+      "msg": "relocatorSession:initializeSession:clientAnonymizationPerformed",
+      "cnt": 3
+    },
+    "3": {
+      "time": "2016-04-04T09:12:47.264Z",
+      "msg": "relocatorSession:initiateSession:exit",
+      "cnt": 4
+    },
+    "4": {
+      "time": "2016-04-04T09:12:47.265Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 7
+    },
+    "5": {
+      "time": "2016-04-04T09:12:47.265Z",
+      "msg": "drawCaseVariant",
+      "cnt": 8,
+      "data": {
+        "case": "appNotInstalled",
+        "numberOfVariants": 1,
+        "sumOfAllWeights": 100,
+        "selectionAt": 54,
+        "totalWeightsWalked": 100,
+        "drawingSource": "new"
+      }
+    },
+    "6": {
+      "time": "2016-04-04T09:12:47.265Z",
+      "msg": "prepareStepOneRedirectionResponse",
+      "cnt": 5,
+      "data": {
+        "destinationUrl": "http://smartlink.hrs.de/cA6knwf/relocationStepOne?locId=5000&hotelId=684613&extcmp=EMC-HRS-Deals-DE-de&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390"
+      }
+    },
+    "7": {
+      "time": "2016-04-04T09:12:47.265Z",
+      "msg": "drawCaseVariant",
+      "cnt": 6,
+      "data": {
+        "case": "nonFunctional",
+        "numberOfVariants": 1,
+        "sumOfAllWeights": 100,
+        "selectionAt": 11,
+        "totalWeightsWalked": 100,
+        "drawingSource": "new"
+      }
+    },
+    "8": {
+      "time": "2016-04-04T09:12:47.266Z",
+      "msg": "drawCaseVariant",
+      "cnt": 10,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "9": {
+      "time": "2016-04-04T09:12:47.266Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 9
+    },
+    "10": {
+      "time": "2016-04-04T09:12:47.268Z",
+      "msg": "relocationEntryStepAction:exit",
+      "cnt": 12,
+      "data": {
+        "dataInPartA": "cA6knwf"
+      }
+    },
+    "11": {
+      "time": "2016-04-04T09:12:47.268Z",
+      "msg": "createResponse",
+      "cnt": 11,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "12": {
+      "time": "2016-04-04T09:12:47.548Z",
+      "msg": "relocationStepOneAction:enter",
+      "cnt": 3,
+      "data": {
+        "salHash": "cA6knwf"
+      }
+    },
+    "13": {
+      "time": "2016-04-04T09:12:47.548Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 1,
+      "data": {
+        "uniqueCookieName": "9d0dc9c9cc2537667fe2cafa54a466bc",
+        "uniqueCookieValue": null,
+        "rSID": "6A5CQJeJjdeflSMB4"
+      }
+    },
+    "14": {
+      "time": "2016-04-04T09:12:47.548Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 2
+    },
+    "15": {
+      "time": "2016-04-04T09:12:47.549Z",
+      "msg": "drawCaseVariant",
+      "cnt": 5,
+      "data": {
+        "case": "appInstalled",
+        "numberOfVariants": 1,
+        "sumOfAllWeights": 100,
+        "selectionAt": 64,
+        "totalWeightsWalked": 100,
+        "drawingSource": "new"
+      }
+    },
+    "16": {
+      "time": "2016-04-04T09:12:47.549Z",
+      "msg": "processSalSearchPattern:enter",
+      "cnt": 4
+    },
+    "17": {
+      "time": "2016-04-04T09:12:47.549Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 6
+    },
+    "18": {
+      "time": "2016-04-04T09:12:47.550Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 8,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "safeUrl": ""
+      }
+    },
+    "19": {
+      "time": "2016-04-04T09:12:47.550Z",
+      "msg": "drawCaseVariant",
+      "cnt": 7,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "20": {
+      "time": "2016-04-04T09:12:47.555Z",
+      "msg": "relocationStepOneAction:exit",
+      "cnt": 10
+    },
+    "21": {
+      "time": "2016-04-04T09:12:47.555Z",
+      "msg": "createResponse",
+      "cnt": 9,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "22": {
+      "time": "2016-04-04T09:12:49.997Z",
+      "msg": "relocationStepTwoAction:enter",
+      "cnt": 1,
+      "data": {
+        "salHash": "cA6knwf"
+      }
+    },
+    "23": {
+      "time": "2016-04-04T09:12:50.003Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 3
+    },
+    "24": {
+      "time": "2016-04-04T09:12:50.003Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 5
+    },
+    "25": {
+      "time": "2016-04-04T09:12:50.003Z",
+      "msg": "drawCaseVariant",
+      "cnt": 4,
+      "data": {
+        "case": "appInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "26": {
+      "time": "2016-04-04T09:12:50.003Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 2,
+      "data": {
+        "uniqueCookieName": "d8ed30ac16c9ed4cf96db64b04d8b368",
+        "uniqueCookieValue": null,
+        "rSID": "6A5CQJeJjdeflSMB4"
+      }
+    },
+    "27": {
+      "time": "2016-04-04T09:12:50.004Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 7,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "safeUrl": ""
+      }
+    },
+    "28": {
+      "time": "2016-04-04T09:12:50.004Z",
+      "msg": "drawCaseVariant",
+      "cnt": 6,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "29": {
+      "time": "2016-04-04T09:12:50.008Z",
+      "msg": "relocationStepTwoAction:exit",
+      "cnt": 9,
+      "data": {
+        "proceed": true
+      }
+    },
+    "30": {
+      "time": "2016-04-04T09:12:50.008Z",
+      "msg": "createResponse",
+      "cnt": 8,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "31": {
+      "time": "2016-04-04T09:12:51.506Z",
+      "msg": "appNotInstalledAction:enter",
+      "cnt": 1,
+      "data": {
+        "salHash": "cA6knwf"
+      }
+    },
+    "32": {
+      "time": "2016-04-04T09:12:51.512Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 2,
+      "data": {
+        "uniqueCookieName": "a723b1ca6d1ea3c2300e6201b7e9602d",
+        "uniqueCookieValue": null,
+        "rSID": "6A5CQJeJjdeflSMB4"
+      }
+    },
+    "33": {
+      "time": "2016-04-04T09:12:51.512Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 3
+    },
+    "34": {
+      "time": "2016-04-04T09:12:51.512Z",
+      "msg": "prepareAppNotInstalledResponse:enter",
+      "cnt": 4
+    },
+    "35": {
+      "time": "2016-04-04T09:12:51.512Z",
+      "msg": "drawCaseVariant",
+      "cnt": 5,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "36": {
+      "time": "2016-04-04T09:12:51.512Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 6
+    },
+    "37": {
+      "time": "2016-04-04T09:12:51.513Z",
+      "msg": "drawCaseVariant",
+      "cnt": 7,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "38": {
+      "time": "2016-04-04T09:12:51.514Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 8,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "safeUrl": ""
+      }
+    },
+    "39": {
+      "time": "2016-04-04T09:12:51.518Z",
+      "msg": "prepareAppNotInstalledResponse:success",
+      "cnt": 9,
+      "data": {
+        "destinationUrl": "http://www.hrs.de/deals/de/deal/l/de/d/5000?extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390"
+      }
+    },
+    "40": {
+      "time": "2016-04-04T09:12:51.518Z",
+      "msg": "createResponse",
+      "cnt": 10,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "41": {
+      "time": "2016-04-04T09:12:51.518Z",
+      "msg": "appNotInstalledAction:exit",
+      "cnt": 11,
+      "data": {
+        "proceed": true
+      }
+    }
+  },
+  "spec:relocator:session:startedAt": "2016-04-04T09:12:47.259Z",
+  "spec:relocator:events:time:first": "2016-04-04T09:12:47.272Z",
+  "spec:relocator:events:time:last": "2016-04-04T09:12:51.678Z",
+  "spec:relocator:events:count": 9,
+  "spec:relocator:parsing:last:updatedAt:bucket": "20160404:09:13",
+  "spec:relocator:session:duration:milliseconds": 4405,
+  "customer": "hrs",
+  "spec:relocator:version": "2.8.1",
+  "execution:backend:host:name": "apps-a-1",
+  "execution:proxy:external:host:name": "apps-a-1",
+  "request:uri:raw": "/cA6knwf?locId=5000&hotelId=684613&extcmp=EMC-HRS-Deals-DE-de&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "request:uri:prepared": "/cA6knwf?locId=5000&hotelId=684613&extcmp=EMC-HRS-Deals-DE-de&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "spec:relocator:linkHash": "cA6knwf",
+  "spec:relocator:session:temporary": false,
+  "request:time:epoch": 1459761167.2362,
+  "request:time": "2016-04-04T09:12:47.236Z",
+  "request:id": "ca1Fo3bgWIE8xMqb2",
+  "request:server:httpHost": "smartlink.hrs.de",
+  "request:uri": "http://smartlink.hrs.de/cA6knwf?CCID=33340390&CEID=15528672&category=A&customerId=1016845003&extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&lang=de&locId=5000",
+  "request:clientIp": "94.220.36.0",
+  "request:client:country:code:iso": "DE",
+  "request:client:continent:code": "EU",
+  "request:route": "relocation_relocationEntryStep",
+  "request:method": "GET",
+  "request:method:real": "GET",
+  "request:route:params:dataIn": "cA6knwf",
+  "request:headers:all": {
+    "content-type": [
+      ""
+    ],
+    "content-length": [
+      ""
+    ],
+    "host": [
+      "smartlink.hrs.de"
+    ],
+    "x-real-ip": [
+      "94.220.36.0"
+    ],
+    "x-forwarded-for": [
+      "94.220.36.0"
+    ],
+    "anonymization-ip-hash": [
+      "b16c97e547012491f107adebe079f31b"
+    ],
+    "connection": [
+      "close"
+    ],
+    "accept": [
+      "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    ],
+    "cookie": [
+      "AMCV_9C186C5C517EDF0A0A490D45%40AdobeOrg=-2017484664%7CMCMID%7C85634060005525398400441418054865940943%7CMCAAMLH-1450105053%7C6%7CMCAAMB-1450105053%7CcIBAx_aQzFEHcPoEv0GwcQ%7CMCAID%7CNONE; _ga=GA1.2.715372969.1436009177; utag_main=v_id:014d75809f8c0013ebe44cb1009900085008e07d00432$_sn:17$_ss:1$_st:1450380665615$segment:Ret1%3Bexp-1452092253249$_pn:1%3Bexp-session$ses_id:1450378865615%3Bexp-session; wa_pers=%20dslv%3D1449500274710%7C1544108274710%3B%20dslv_s%3D9%7C1449502074710%3B%20gpv_mpn%3DDeal%2520Details%7C1449502074715%3B"
+    ],
+    "user-agent": [
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1"
+    ],
+    "accept-language": [
+      "de-de"
+    ],
+    "accept-encoding": [
+      "gzip, deflate"
+    ],
+    "x-php-ob-level": [
+      1
+    ]
+  },
+  "request:server:headers": {
+    "CONTENT_TYPE": "",
+    "CONTENT_LENGTH": "",
+    "HOST": "smartlink.hrs.de",
+    "X_REAL_IP": "94.220.36.0",
+    "X_FORWARDED_FOR": "94.220.36.0",
+    "ANONYMIZATION_IP_HASH": "b16c97e547012491f107adebe079f31b",
+    "CONNECTION": "close",
+    "ACCEPT": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "COOKIE": "AMCV_9C186C5C517EDF0A0A490D45%40AdobeOrg=-2017484664%7CMCMID%7C85634060005525398400441418054865940943%7CMCAAMLH-1450105053%7C6%7CMCAAMB-1450105053%7CcIBAx_aQzFEHcPoEv0GwcQ%7CMCAID%7CNONE; _ga=GA1.2.715372969.1436009177; utag_main=v_id:014d75809f8c0013ebe44cb1009900085008e07d00432$_sn:17$_ss:1$_st:1450380665615$segment:Ret1%3Bexp-1452092253249$_pn:1%3Bexp-session$ses_id:1450378865615%3Bexp-session; wa_pers=%20dslv%3D1449500274710%7C1544108274710%3B%20dslv_s%3D9%7C1449502074710%3B%20gpv_mpn%3DDeal%2520Details%7C1449502074715%3B",
+    "USER_AGENT": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1",
+    "ACCEPT_LANGUAGE": "de-de",
+    "ACCEPT_ENCODING": "gzip, deflate"
+  },
+  "request:params:all": {
+    "locId": "5000",
+    "hotelId": "684613",
+    "extcmp": "EMC-HRS-Deals-DE-de",
+    "id": "128720136938EMA",
+    "customerId": "1016845003",
+    "lang": "de",
+    "category": "A",
+    "CEID": "15528672",
+    "CCID": "33340390"
+  },
+  "request:userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13E238 Safari/601.1",
+  "spec:relocator:params:customer:locId": "5000",
+  "spec:relocator:params:customer:hotelId": "684613",
+  "spec:relocator:params:customer:extcmp": "EMC-HRS-Deals-DE-de",
+  "spec:relocator:params:customer:id": "128720136938EMA",
+  "spec:relocator:params:customer:customerId": "1016845003",
+  "spec:relocator:params:customer:lang": "de",
+  "spec:relocator:params:customer:category": "A",
+  "spec:relocator:params:customer:CEID": "15528672",
+  "spec:relocator:params:customer:CCID": "33340390",
+  "request:fingerprint:raw": "{\"HTTP_ACCEPT\":\"text\\/html,application\\/xhtml+xml,application\\/xml;q=0.9,*\\/*;q=0.8\",\"HTTP_ACCEPT_LANGUAGE\":\"de-de\",\"HTTP_ACCEPT_ENCODING\":\"gzip, deflate\",\"HTTP_USER_AGENT\":\"Mozilla\\/5.0 (iPhone; CPU iPhone OS 9_3_1 like Mac OS X) AppleWebKit\\/601.1.46 (KHTML, like Gecko) Version\\/9.0 Mobile\\/13E238 Safari\\/601.1\"}",
+  "request:fingerprint:hash": "3b931ee9647f1168e452915d5a56a92d",
+  "request:languages": [
+    "de"
+  ],
+  "request:languages:withVariants": [
+    "de_de"
+  ],
+  "spec:relocator:request:first:time:epoch": 1459761167.2362,
+  "request:client:anonymization:enabled": true,
+  "request:client:anonymization:ip:hash": "b16c97e547012491f107adebe079f31b",
+  "spec:relocator:session:startedAt:timestamp": 1459761167,
+  "spec:relocator:rsidSource": 2,
+  "spec:relocator:rsidShouldBeValidated": true,
+  "spec:relocator:userIdent": "fHFDDxI1Ghh1b",
+  "spec:relocator:userIdentSource": 2,
+  "request:platform": "ios",
+  "request:platformVersion": 9.31,
+  "request:deviceType": "mobile",
+  "request:browser": "safari",
+  "request:browserVersion": 9,
+  "request:isMobile": true,
+  "spec:relocator:client:os:family": "iOS",
+  "spec:relocator:client:os:version": "9.3.1",
+  "spec:relocator:client:os:version:major": "9",
+  "spec:relocator:client:os:version:majorMinor": "9.3",
+  "spec:relocator:client:device:family": "iPhone",
+  "spec:relocator:client:device:brand": "Apple",
+  "spec:relocator:client:device:model": "iPhone",
+  "spec:relocator:client:ua:family": "Mobile Safari",
+  "spec:relocator:client:ua:model": "Mobile Safari",
+  "spec:relocator:client:ua:version": "9.0",
+  "spec:relocator:client:ua:version:major": "9",
+  "spec:relocator:client:ua:version:majorMinor": "9.0",
+  "spec:relocator:linkCustomer": "hrs",
+  "spec:relocator:linkIdent": "WBDGSuSvgF3XpycRkJnSMkujJ6ac55MBgG43u7S6LmhdMb173qjHh6QqCN1wcBt4UYrj",
+  "spec:relocator:linkName": "Deals Newsletter Link",
+  "spec:relocator:linkConfigVersion": 1441901977,
+  "spec:relocator:link:mobileApp:id": 1,
+  "spec:relocator:link:mobileApp:name": "HRS",
+  "spec:relocator:link:platform:configVersion": 1441974285,
+  "spec:relocator:link:platform:ident": "IYkBNECakvvL8cEMnS8I8YmahTE1zjiwxel4mct0zQ5y73QR0eU9V53Kq3H8sOVnI2ObhRTWf",
+  "spec:relocator:link:platform:name": "ios_mobile",
+  "spec:relocator:link:platform:platform": "ios",
+  "spec:relocator:link:platform:deviceType": "mobile",
+  "spec:relocator:appDetectionEnabled": true,
+  "spec:relocator:stepOneUrl": "http://smartlink.hrs.de/cA6knwf/relocationStepOne?locId=5000&hotelId=684613&extcmp=EMC-HRS-Deals-DE-de&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "spec:relocator:nonFunctionalUrl": "http://www.hrs.de/deals/de/deal/l/de/d/5000?extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "spec:relocator:notInstalledUrl": "http://www.hrs.de/deals/de/deal/l/de/d/5000?extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "spec:relocator:final": "functionalRelocation:appNotInstalled",
+  "spec:relocator:final:case": "appNotInstalled",
+  "spec:relocator:final:isCertain": true,
+  "spec:relocator:final:destinationUrl": "http://www.hrs.de/deals/de/deal/l/de/d/5000?extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "execution:profiler:time:toFlush:microseconds": 323546,
+  "spec:relocator:audienceDb:mobileApp:installation:state": "unknown",
+  "relocator:trackingCookieValue": "TWuh9Zlv5mf",
+  "spec:relocator:appInstalledUrl": "hrsapp://deals?hotelnumber=684613&hotelname=hotel&extcmp=EMC-HRS-Deals-DE-de&locId=5000&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390",
+  "spec:relocator:relocationMethod": "L",
+  "spec:relocator:relocationMethodParams": [],
+  "spec:relocator:relocationMethodCase": "ios|l|",
+  "spec:relocator:final:variant:name": "SAL-3/1152",
+  "spec:relocator:final:action:name": "goToUrl",
+  "spec:relocator:installTracking:fingerprintHash": "777105a2d9d250220c325e42ff53ec17",
+  "spec:relocator:appNotInstalledUrl": "http://www.hrs.de/deals/de/deal/l/de/d/5000?extcmp=EMC-HRS-Deals-DE-de&hotelId=684613&id=128720136938EMA&customerId=1016845003&lang=de&category=A&CEID=15528672&CCID=33340390"
+}

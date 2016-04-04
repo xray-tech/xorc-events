@@ -1,0 +1,736 @@
+{
+  "_id": {
+    "$id": "5702302ad52f43587e87447c"
+  },
+  "spec:relocator:rSID": "FvCZtndnvutoCAAS6",
+  "spec:relocator:updates:checksums": [
+    "44a88a77ae99a2aaf64405993405e515",
+    "11d16af202fb581c3f6e86828621a490",
+    "f2402a167ff8b676a0bc34adf497fdca",
+    "30a8784e94519f9b35dd51c89e158e1b",
+    "7dec43a908ea48d5f85bd361d6034a0e",
+    "31ae0e062b25e217957c208dd8772b0d",
+    "f2bfa4f952772a039432ab87b8743c0a"
+  ],
+  "events": {
+    "0": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:41.341Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6"
+    },
+    "1": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:44.779Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6"
+    },
+    "2": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-14111656",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:48.503Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6",
+      "payload": {
+        "customer": "lovoo",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-1",
+        "execution:proxy:external:host:name": "apps-a-1",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:41.328Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 7169,
+        "spec:relocator:relocationMethod": "L",
+        "spec:relocator:relocationStep": "2",
+        "request:time:epoch": 1459761168.4769,
+        "request:time": "2016-04-04T09:12:48.476Z",
+        "request:id": "6aFa6oxPYQf9exiL5",
+        "request:server:httpHost": "2app.lk",
+        "request:uri": "http://2app.lk/TkWEo3b/eventLogger?ct=1459761168384&method=L&name=pageRendered&step=2&vs=visible",
+        "request:clientIp": "2.156.88.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "TkWEo3b",
+        "execution:profiler:time:toFlush:microseconds": 28185
+      }
+    },
+    "3": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-14111656",
+      "src": "relocator:eventLogger",
+      "name": "redirectToAppNotInstalled",
+      "time": "2016-04-04T09:12:50.084Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6",
+      "payload": {
+        "customer": "lovoo",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-1",
+        "execution:proxy:external:host:name": "apps-a-1",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:41.328Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 8750,
+        "spec:relocator:relocationMethod": "L",
+        "spec:relocator:relocationStep": "2",
+        "request:time:epoch": 1459761170.0575,
+        "request:time": "2016-04-04T09:12:50.057Z",
+        "request:id": "VZXa6KkfOZxMyd6e8",
+        "request:server:httpHost": "2app.lk",
+        "request:uri": "http://2app.lk/TkWEo3b/eventLogger?ct=1459761169869&method=L&name=redirectToAppNotInstalled&step=2",
+        "request:clientIp": "2.156.88.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "TkWEo3b",
+        "execution:profiler:time:toFlush:microseconds": 28805
+      }
+    },
+    "4": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:50.207Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6"
+    },
+    "5": {
+      "logName": "relocator-eventLogger.log-20160404-1459761181-i-14111656",
+      "src": "relocator:eventLogger",
+      "name": "pageRendered",
+      "time": "2016-04-04T09:12:50.573Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6",
+      "payload": {
+        "customer": "lovoo",
+        "spec:relocator:version": "2.8.1",
+        "execution:backend:host:name": "apps-a-1",
+        "execution:proxy:external:host:name": "apps-a-1",
+        "spec:relocator:session:startedAt": "2016-04-04T09:12:41.328Z",
+        "spec:relocator:request:serverSide:timeFromFirstRequest:milliseconds": 9239,
+        "spec:relocator:relocationMethod": "",
+        "spec:relocator:relocationStep": "appNotInstalled",
+        "request:time:epoch": 1459761170.5465,
+        "request:time": "2016-04-04T09:12:50.546Z",
+        "request:id": "AxConGviiHhlYMs7f",
+        "request:server:httpHost": "2app.lk",
+        "request:uri": "http://2app.lk/TkWEo3b/eventLogger?ct=1459761170472&method=&name=pageRendered&step=appNotInstalled&vs=visible",
+        "request:clientIp": "2.156.88.0",
+        "request:route": "relocation_eventLogger",
+        "request:content:type": null,
+        "request:method": "GET",
+        "request:method:real": "GET",
+        "request:route:params:salHash": "TkWEo3b",
+        "execution:profiler:time:toFlush:microseconds": 28043
+      }
+    },
+    "6": {
+      "logName": "relocator-relocation-functional.log-20160404-1459761181-i-14111656",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:48.073Z",
+      "spec:relocator:rSID": "FvCZtndnvutoCAAS6"
+    }
+  },
+  "pagesRendered": [
+    {
+      "time": "2016-04-04T09:12:48.503Z",
+      "page": "relocation-2",
+      "uri": "http://2app.lk/TkWEo3b/eventLogger?ct=1459761168384&method=L&name=pageRendered&step=2&vs=visible"
+    },
+    {
+      "time": "2016-04-04T09:12:50.573Z",
+      "page": "relocation-appNotInstalled",
+      "uri": "http://2app.lk/TkWEo3b/eventLogger?ct=1459761170472&method=&name=pageRendered&step=appNotInstalled&vs=visible"
+    }
+  ],
+  "log": {
+    "0": {
+      "time": "2016-04-04T09:12:41.324Z",
+      "msg": "relocationEntryStepAction:enter",
+      "cnt": 1,
+      "data": {
+        "dataIn": "TkWEo3b"
+      }
+    },
+    "1": {
+      "time": "2016-04-04T09:12:41.328Z",
+      "msg": "relocatorSession:initializeSession:clientAnonymizationPerformed",
+      "cnt": 3
+    },
+    "2": {
+      "time": "2016-04-04T09:12:41.328Z",
+      "msg": "relocatorSession:initiateSession:enter",
+      "cnt": 2
+    },
+    "3": {
+      "time": "2016-04-04T09:12:41.334Z",
+      "msg": "relocatorSession:initiateSession:exit",
+      "cnt": 4
+    },
+    "4": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "SalLinkCaseVariantGoToStoreDM:getRedirectUrl",
+      "cnt": 9,
+      "data": {
+        "installTrackingData": {
+          "customerIdent": "lovoo",
+          "mobileAppId": 1,
+          "platform": "ios",
+          "installReferrer": null,
+          "fingerprintHash": null,
+          "clientIp": "2.156.88.0",
+          "rSID": "FvCZtndnvutoCAAS6",
+          "misc": {
+            "appName": null,
+            "appId": "id445338486",
+            "appIdentificationUsed": "appId-asStringWithId",
+            "storeName": "appleAppStore",
+            "installationUrl": "http://itunes.apple.com/app/id445338486",
+            "afterInstallationUrl": null,
+            "salHash": "TkWEo3b",
+            "salCaseVariantName": "SAL-1/378",
+            "salCaseVariantConfigVersion": 1441032808,
+            "afterInstallationActionName": null,
+            "afterInstallationActionParams": null
+          }
+        },
+        "MESSAGE": "Install tracking is disabled."
+      }
+    },
+    "5": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "drawCaseVariant",
+      "cnt": 10,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "6": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "SalLinkCaseVariantGoToStoreDM:getRedirectUrl",
+      "cnt": 11,
+      "data": {
+        "installTrackingData": {
+          "customerIdent": "lovoo",
+          "mobileAppId": 1,
+          "platform": "ios",
+          "installReferrer": null,
+          "fingerprintHash": null,
+          "clientIp": "2.156.88.0",
+          "rSID": "FvCZtndnvutoCAAS6",
+          "misc": {
+            "appName": null,
+            "appId": "id445338486",
+            "appIdentificationUsed": "appId-asStringWithId",
+            "storeName": "appleAppStore",
+            "installationUrl": "http://itunes.apple.com/app/id445338486",
+            "afterInstallationUrl": null,
+            "salHash": "TkWEo3b",
+            "salCaseVariantName": "SAL-1/378",
+            "salCaseVariantConfigVersion": 1441032808,
+            "afterInstallationActionName": null,
+            "afterInstallationActionParams": null
+          }
+        },
+        "MESSAGE": "Install tracking is disabled."
+      }
+    },
+    "7": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "SalLinkCaseVariantGoToStoreDM:getRedirectUrl",
+      "cnt": 7,
+      "data": {
+        "installTrackingData": {
+          "customerIdent": "lovoo",
+          "mobileAppId": 1,
+          "platform": "ios",
+          "installReferrer": null,
+          "fingerprintHash": null,
+          "clientIp": "2.156.88.0",
+          "rSID": "FvCZtndnvutoCAAS6",
+          "misc": {
+            "appName": null,
+            "appId": "id445338486",
+            "appIdentificationUsed": "appId-asStringWithId",
+            "storeName": "appleAppStore",
+            "installationUrl": "http://itunes.apple.com/app/id445338486",
+            "afterInstallationUrl": null,
+            "salHash": "TkWEo3b",
+            "salCaseVariantName": "SAL-1/379",
+            "salCaseVariantConfigVersion": 1441032808,
+            "afterInstallationActionName": null,
+            "afterInstallationActionParams": null
+          }
+        },
+        "MESSAGE": "Install tracking is disabled."
+      }
+    },
+    "8": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "drawCaseVariant",
+      "cnt": 6,
+      "data": {
+        "case": "nonFunctional",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "9": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "drawCaseVariant",
+      "cnt": 8,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "10": {
+      "time": "2016-04-04T09:12:41.335Z",
+      "msg": "prepareStepOneRedirectionResponse",
+      "cnt": 5,
+      "data": {
+        "destinationUrl": "http://2app.lk/TkWEo3b/relocationStepOne?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac"
+      }
+    },
+    "11": {
+      "time": "2016-04-04T09:12:41.337Z",
+      "msg": "createResponse",
+      "cnt": 12,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "12": {
+      "time": "2016-04-04T09:12:41.338Z",
+      "msg": "relocationEntryStepAction:exit",
+      "cnt": 13,
+      "data": {
+        "dataInPartA": "TkWEo3b"
+      }
+    },
+    "13": {
+      "time": "2016-04-04T09:12:44.771Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 1,
+      "data": {
+        "uniqueCookieName": "fb193291350f09a34a2190e17feb152d",
+        "uniqueCookieValue": null,
+        "rSID": "FvCZtndnvutoCAAS6"
+      }
+    },
+    "14": {
+      "time": "2016-04-04T09:12:44.771Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 2
+    },
+    "15": {
+      "time": "2016-04-04T09:12:44.771Z",
+      "msg": "processSalSearchPattern:enter",
+      "cnt": 4
+    },
+    "16": {
+      "time": "2016-04-04T09:12:44.771Z",
+      "msg": "relocationStepOneAction:enter",
+      "cnt": 3,
+      "data": {
+        "salHash": "TkWEo3b"
+      }
+    },
+    "17": {
+      "time": "2016-04-04T09:12:44.772Z",
+      "msg": "drawCaseVariant",
+      "cnt": 5,
+      "data": {
+        "case": "appInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "18": {
+      "time": "2016-04-04T09:12:44.772Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 6
+    },
+    "19": {
+      "time": "2016-04-04T09:12:44.773Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 7,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "final_destination_on_return_to_browser": {
+          "appOpen": "http://www.lovoo.com",
+          "appNotInstalled": "http://www.lovoo.com"
+        },
+        "step_2_backgroundThreshold": 200,
+        "step_2_testRepetition": 100,
+        "safeUrl": "",
+        "step_2_testCountThresholdToNotInstalled": 50
+      }
+    },
+    "20": {
+      "time": "2016-04-04T09:12:44.775Z",
+      "msg": "createResponse",
+      "cnt": 8,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "21": {
+      "time": "2016-04-04T09:12:44.776Z",
+      "msg": "relocationStepOneAction:exit",
+      "cnt": 9
+    },
+    "22": {
+      "time": "2016-04-04T09:12:50.194Z",
+      "msg": "appNotInstalledAction:enter",
+      "cnt": 1,
+      "data": {
+        "salHash": "TkWEo3b"
+      }
+    },
+    "23": {
+      "time": "2016-04-04T09:12:50.199Z",
+      "msg": "SalLinkCaseVariantGoToStoreDM:getRedirectUrl",
+      "cnt": 6,
+      "data": {
+        "installTrackingData": {
+          "customerIdent": "lovoo",
+          "mobileAppId": 1,
+          "platform": "ios",
+          "installReferrer": null,
+          "fingerprintHash": "a4515acc87daad30bed39f373c92a18d",
+          "clientIp": "2.156.88.0",
+          "rSID": "FvCZtndnvutoCAAS6",
+          "misc": {
+            "appName": null,
+            "appId": "id445338486",
+            "appIdentificationUsed": "appId-asStringWithId",
+            "storeName": "appleAppStore",
+            "installationUrl": "http://itunes.apple.com/app/id445338486",
+            "afterInstallationUrl": null,
+            "salHash": "TkWEo3b",
+            "salCaseVariantName": "SAL-1/378",
+            "salCaseVariantConfigVersion": 1441032808,
+            "afterInstallationActionName": null,
+            "afterInstallationActionParams": null
+          }
+        },
+        "MESSAGE": "Install tracking is disabled."
+      }
+    },
+    "24": {
+      "time": "2016-04-04T09:12:50.199Z",
+      "msg": "drawCaseVariant",
+      "cnt": 5,
+      "data": {
+        "case": "appNotInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "25": {
+      "time": "2016-04-04T09:12:50.199Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 2,
+      "data": {
+        "uniqueCookieName": "0e162f6b2bba3cdac19a7de42301b6dc",
+        "uniqueCookieValue": null,
+        "rSID": "FvCZtndnvutoCAAS6"
+      }
+    },
+    "26": {
+      "time": "2016-04-04T09:12:50.199Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 3
+    },
+    "27": {
+      "time": "2016-04-04T09:12:50.199Z",
+      "msg": "prepareAppNotInstalledResponse:enter",
+      "cnt": 4
+    },
+    "28": {
+      "time": "2016-04-04T09:12:50.200Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 7,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "final_destination_on_return_to_browser": {
+          "appOpen": "http://www.lovoo.com",
+          "appNotInstalled": "http://www.lovoo.com"
+        },
+        "step_2_backgroundThreshold": 200,
+        "step_2_testRepetition": 100,
+        "safeUrl": "",
+        "step_2_testCountThresholdToNotInstalled": 50
+      }
+    },
+    "29": {
+      "time": "2016-04-04T09:12:50.203Z",
+      "msg": "appNotInstalledAction:exit",
+      "cnt": 10,
+      "data": {
+        "proceed": true
+      }
+    },
+    "30": {
+      "time": "2016-04-04T09:12:50.203Z",
+      "msg": "createResponse",
+      "cnt": 9,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "31": {
+      "time": "2016-04-04T09:12:50.203Z",
+      "msg": "prepareAppNotInstalledResponse:success",
+      "cnt": 8,
+      "data": {
+        "destinationUrl": "http://itunes.apple.com/app/id445338486"
+      }
+    },
+    "32": {
+      "time": "2016-04-04T09:12:48.055Z",
+      "msg": "relocationStepTwoAction:enter",
+      "cnt": 1,
+      "data": {
+        "salHash": "TkWEo3b"
+      }
+    },
+    "33": {
+      "time": "2016-04-04T09:12:48.064Z",
+      "msg": "ensureRequestUniqueness:enter",
+      "cnt": 2,
+      "data": {
+        "uniqueCookieName": "71e0f1980c5a284f11aff4e75987819b",
+        "uniqueCookieValue": null,
+        "rSID": "FvCZtndnvutoCAAS6"
+      }
+    },
+    "34": {
+      "time": "2016-04-04T09:12:48.064Z",
+      "msg": "ensureRequestUniqueness: new unique cookie created",
+      "cnt": 3
+    },
+    "35": {
+      "time": "2016-04-04T09:12:48.064Z",
+      "msg": "drawCaseVariant",
+      "cnt": 4,
+      "data": {
+        "case": "appInstalled",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "36": {
+      "time": "2016-04-04T09:12:48.064Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 5
+    },
+    "37": {
+      "time": "2016-04-04T09:12:48.065Z",
+      "msg": "prepareCustomerRelocationParams",
+      "cnt": 6,
+      "data": {
+        "step_1_timeout_2": 2000,
+        "step_2_L_intervalCounterLimit": 120,
+        "step_2_L_intervalRepetitionMs": 5,
+        "step_2_L_appNotInstalledTimeout": 1000,
+        "step_2_L_appNotInstalledDetectionTimeout": 500,
+        "final_destination_on_return_to_browser": {
+          "appOpen": "http://www.lovoo.com",
+          "appNotInstalled": "http://www.lovoo.com"
+        },
+        "step_2_backgroundThreshold": 200,
+        "step_2_testRepetition": 100,
+        "safeUrl": "",
+        "step_2_testCountThresholdToNotInstalled": 50
+      }
+    },
+    "38": {
+      "time": "2016-04-04T09:12:48.070Z",
+      "msg": "createResponse",
+      "cnt": 7,
+      "data": {
+        "type": 1,
+        "destinationUrl": null
+      }
+    },
+    "39": {
+      "time": "2016-04-04T09:12:48.070Z",
+      "msg": "relocationStepTwoAction:exit",
+      "cnt": 8,
+      "data": {
+        "proceed": true
+      }
+    }
+  },
+  "spec:relocator:session:startedAt": "2016-04-04T09:12:41.328Z",
+  "spec:relocator:events:time:first": "2016-04-04T09:12:41.341Z",
+  "spec:relocator:events:time:last": "2016-04-04T09:12:50.573Z",
+  "spec:relocator:events:count": 7,
+  "spec:relocator:parsing:last:updatedAt:bucket": "20160404:09:13",
+  "spec:relocator:final:appNotInstalled:detected": "browserEvent",
+  "spec:relocator:session:duration:milliseconds": 9231,
+  "customer": "lovoo",
+  "spec:relocator:version": "2.8.1",
+  "execution:backend:host:name": "apps-a-2",
+  "execution:proxy:external:host:name": "apps-a-2",
+  "request:uri:raw": "/TkWEo3b?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac",
+  "request:uri:prepared": "/TkWEo3b?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac",
+  "spec:relocator:linkHash": "TkWEo3b",
+  "spec:relocator:previousRsidFromCookie": "N8indq1KGocZXUs81",
+  "spec:relocator:session:temporary": false,
+  "request:time:epoch": 1459761161.3074,
+  "request:time": "2016-04-04T09:12:41.307Z",
+  "request:id": "LHnYW6jfcGkrzNioe",
+  "request:server:httpHost": "2app.lk",
+  "request:uri": "http://2app.lk/TkWEo3b?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac",
+  "request:clientIp": "2.156.88.0",
+  "request:client:country:code:iso": "IT",
+  "request:client:continent:code": "EU",
+  "request:route": "relocation_relocationEntryStep",
+  "request:method": "GET",
+  "request:method:real": "GET",
+  "request:route:params:dataIn": "TkWEo3b",
+  "request:headers:all": {
+    "content-type": [
+      ""
+    ],
+    "content-length": [
+      ""
+    ],
+    "host": [
+      "2app.lk"
+    ],
+    "x-real-ip": [
+      "2.156.88.0"
+    ],
+    "x-forwarded-for": [
+      "2.156.88.0"
+    ],
+    "anonymization-ip-hash": [
+      "1badd97759fcd7d7bff55ff3809ad78a"
+    ],
+    "connection": [
+      "close"
+    ],
+    "accept": [
+      "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    ],
+    "cookie": [
+      "relocationRSID=N8indq1KGocZXUs81; relocationUser=y3mIuL1gScnr7"
+    ],
+    "user-agent": [
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75 Safari/601.1"
+    ],
+    "accept-language": [
+      "it-it"
+    ],
+    "accept-encoding": [
+      "gzip, deflate"
+    ],
+    "x-php-ob-level": [
+      1
+    ]
+  },
+  "request:server:headers": {
+    "CONTENT_TYPE": "",
+    "CONTENT_LENGTH": "",
+    "HOST": "2app.lk",
+    "X_REAL_IP": "2.156.88.0",
+    "X_FORWARDED_FOR": "2.156.88.0",
+    "ANONYMIZATION_IP_HASH": "1badd97759fcd7d7bff55ff3809ad78a",
+    "CONNECTION": "close",
+    "ACCEPT": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "COOKIE": "relocationRSID=N8indq1KGocZXUs81; relocationUser=y3mIuL1gScnr7",
+    "USER_AGENT": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75 Safari/601.1",
+    "ACCEPT_LANGUAGE": "it-it",
+    "ACCEPT_ENCODING": "gzip, deflate"
+  },
+  "request:params:all": {
+    "page": "prf",
+    "user_id": "56f5abc51c0ba0aa2f8b45ac"
+  },
+  "request:userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13C75 Safari/601.1",
+  "spec:relocator:params:customer:page": "prf",
+  "spec:relocator:params:customer:user_id": "56f5abc51c0ba0aa2f8b45ac",
+  "request:fingerprint:raw": "{\"HTTP_ACCEPT\":\"text\\/html,application\\/xhtml+xml,application\\/xml;q=0.9,*\\/*;q=0.8\",\"HTTP_ACCEPT_LANGUAGE\":\"it-it\",\"HTTP_ACCEPT_ENCODING\":\"gzip, deflate\",\"HTTP_USER_AGENT\":\"Mozilla\\/5.0 (iPhone; CPU iPhone OS 9_2 like Mac OS X) AppleWebKit\\/601.1.46 (KHTML, like Gecko) Version\\/9.0 Mobile\\/13C75 Safari\\/601.1\"}",
+  "request:fingerprint:hash": "a6fa7fa41590d9c9d05957bd02298aa8",
+  "request:languages": [
+    "it"
+  ],
+  "request:languages:withVariants": [
+    "it_it"
+  ],
+  "spec:relocator:request:first:time:epoch": 1459761161.3074,
+  "request:client:anonymization:enabled": true,
+  "request:client:anonymization:ip:hash": "1badd97759fcd7d7bff55ff3809ad78a",
+  "spec:relocator:session:startedAt:timestamp": 1459761161,
+  "spec:relocator:rsidSource": 2,
+  "spec:relocator:rsidShouldBeValidated": true,
+  "spec:relocator:userIdent": "y3mIuL1gScnr7",
+  "spec:relocator:userIdentSource": 1,
+  "request:platform": "ios",
+  "request:platformVersion": 9.2,
+  "request:deviceType": "mobile",
+  "request:browser": "safari",
+  "request:browserVersion": 9,
+  "request:isMobile": true,
+  "spec:relocator:client:os:family": "iOS",
+  "spec:relocator:client:os:version": "9.2",
+  "spec:relocator:client:os:version:major": "9",
+  "spec:relocator:client:os:version:majorMinor": "9.2",
+  "spec:relocator:client:device:family": "iPhone",
+  "spec:relocator:client:device:brand": "Apple",
+  "spec:relocator:client:device:model": "iPhone",
+  "spec:relocator:client:ua:family": "Mobile Safari",
+  "spec:relocator:client:ua:model": "Mobile Safari",
+  "spec:relocator:client:ua:version": "9.0",
+  "spec:relocator:client:ua:version:major": "9",
+  "spec:relocator:client:ua:version:majorMinor": "9.0",
+  "spec:relocator:linkCustomer": "lovoo",
+  "spec:relocator:linkIdent": "K0dK3XmA73oOFjs5LcTtZGH8GwYuqM2rkuOhcyKWaimlAgbVVz79ERL3wFdeWxH6qSLNSdopV",
+  "spec:relocator:linkName": "Mailrouting Mobile Link",
+  "spec:relocator:linkConfigVersion": 1441030992,
+  "spec:relocator:link:mobileApp:id": 1,
+  "spec:relocator:link:mobileApp:name": "Lovoo",
+  "spec:relocator:link:platform:configVersion": 1441032808,
+  "spec:relocator:link:platform:ident": "0BhwhZAhAQw4tUe3uLCT0cxboMydaxMRZ2R8lzJwzt2nNwBHh7jnnXzWQWyX97AYHewAWTY68",
+  "spec:relocator:link:platform:name": "ios_mobile",
+  "spec:relocator:link:platform:platform": "ios",
+  "spec:relocator:link:platform:deviceType": "mobile",
+  "spec:relocator:appDetectionEnabled": true,
+  "spec:relocator:stepOneUrl": "http://2app.lk/TkWEo3b/relocationStepOne?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac",
+  "spec:relocator:case::action:goToStore:storeName": "appleAppStore",
+  "spec:relocator:case::action:goToStore:appId": "id445338486",
+  "spec:relocator:case::action:goToStore:appIdentificationUsed": "appId-asStringWithId",
+  "spec:relocator:case::action:goToStore:installationUrl": "http://itunes.apple.com/app/id445338486",
+  "spec:relocator:nonFunctionalUrl": "http://itunes.apple.com/app/id445338486",
+  "spec:relocator:case:appNotInstalled:action:goToStore:storeName": "appleAppStore",
+  "spec:relocator:case:appNotInstalled:action:goToStore:appId": "id445338486",
+  "spec:relocator:case:appNotInstalled:action:goToStore:appIdentificationUsed": "appId-asStringWithId",
+  "spec:relocator:case:appNotInstalled:action:goToStore:installationUrl": "http://itunes.apple.com/app/id445338486",
+  "spec:relocator:notInstalledUrl": "http://itunes.apple.com/app/id445338486",
+  "spec:relocator:downloadAppUrl": "http://itunes.apple.com/app/id445338486",
+  "spec:relocator:final": "functionalRelocation:appNotInstalled",
+  "spec:relocator:final:case": "appNotInstalled",
+  "spec:relocator:final:isCertain": true,
+  "spec:relocator:final:destinationUrl": "http://itunes.apple.com/app/id445338486",
+  "execution:profiler:time:toFlush:microseconds": 3472005,
+  "spec:relocator:audienceDb:mobileApp:installation:state": "unknown",
+  "relocator:trackingCookieValue": "H1mEIPz47y8",
+  "spec:relocator:appInstalledUrl": "lovoo://launchPage?page=prf&user_id=56f5abc51c0ba0aa2f8b45ac",
+  "spec:relocator:relocationMethod": "L",
+  "spec:relocator:relocationMethodParams": [],
+  "spec:relocator:relocationMethodCase": "ios|l|",
+  "spec:relocator:final:variant:name": "SAL-1/378",
+  "spec:relocator:final:action:name": "goToStore",
+  "spec:relocator:installTracking:fingerprintHash": "a4515acc87daad30bed39f373c92a18d",
+  "spec:relocator:appNotInstalledUrl": "http://itunes.apple.com/app/id445338486"
+}

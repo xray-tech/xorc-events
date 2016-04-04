@@ -1,0 +1,214 @@
+{
+  "_id": {
+    "$id": "5702302ad52f43587e8744cb"
+  },
+  "spec:relocator:rSID": "60Tx3ktXmzVcSZpad",
+  "spec:relocator:updates:checksums": [
+    "eab779862f221d6e274edbe4c2d9772d"
+  ],
+  "events": [
+    {
+      "logName": "relocator-relocation-non-functional.log-20160404-1459761181-i-bf84b8fd",
+      "src": "relocator:relocation",
+      "name": "sessionUpdate",
+      "time": "2016-04-04T09:12:59.558Z",
+      "spec:relocator:rSID": "60Tx3ktXmzVcSZpad"
+    }
+  ],
+  "pagesRendered": [],
+  "log": {
+    "0": {
+      "time": "2016-04-04T09:12:59.541Z",
+      "msg": "relocationEntryStepAction:enter",
+      "cnt": 1,
+      "data": {
+        "dataIn": "rSxvGf6"
+      }
+    },
+    "1": {
+      "time": "2016-04-04T09:12:59.544Z",
+      "msg": "relocatorSession:initiateSession:enter",
+      "cnt": 2
+    },
+    "2": {
+      "time": "2016-04-04T09:12:59.545Z",
+      "msg": "relocatorSession:initializeSession:clientAnonymizationPerformed",
+      "cnt": 3
+    },
+    "3": {
+      "time": "2016-04-04T09:12:59.553Z",
+      "msg": "relocatorSession:initiateSession:exit",
+      "cnt": 4
+    },
+    "4": {
+      "time": "2016-04-04T09:12:59.554Z",
+      "msg": "drawCaseVariant",
+      "cnt": 5,
+      "data": {
+        "case": "nonFunctional",
+        "drawingSource": "relocationUser"
+      }
+    },
+    "5": {
+      "time": "2016-04-04T09:12:59.554Z",
+      "msg": "parametrizeUrl:attachCustomerParamsToUrl",
+      "cnt": 6
+    },
+    "6": {
+      "time": "2016-04-04T09:12:59.555Z",
+      "msg": "createResponse",
+      "cnt": 7,
+      "data": {
+        "type": 2,
+        "destinationUrl": "http://www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/?loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002"
+      }
+    },
+    "7": {
+      "time": "2016-04-04T09:12:59.555Z",
+      "msg": "relocationEntryStepAction:exit",
+      "cnt": 8,
+      "data": {
+        "dataInPartA": "rSxvGf6"
+      }
+    }
+  },
+  "customer": "westwing",
+  "spec:relocator:version": "2.8.1",
+  "execution:backend:host:name": "apps-a-2",
+  "execution:proxy:external:host:name": "apps-a-2",
+  "request:uri:raw": "/rSxvGf6?dd_target_url=www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/&loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002",
+  "request:uri:prepared": "/rSxvGf6?dd_target_url=www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/&loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002",
+  "spec:relocator:linkHash": "rSxvGf6",
+  "spec:relocator:previousRsidFromCookie": "fyBsW4URIjpjpy5Ha",
+  "spec:relocator:session:temporary": false,
+  "request:time:epoch": 1459761179.5231,
+  "request:time": "2016-04-04T09:12:59.523Z",
+  "request:id": "O5wnZyjE4oMTD9TSd",
+  "request:server:httpHost": "link.westwing.de",
+  "request:uri": "http://link.westwing.de/rSxvGf6?app_redirect=1&campaign=c-zarte-romanze-im-freien1&cp=position_4&dd_target_url=www.westwing.de%2Fc-32ad%2Fc-zarte-romanze-im-freien1%2F&loginHash=55190323ded19ef866fadfe13f93b680&page=cdp&utm_campaign=sale-nl-20160321&utm_content=c-zarte-romanze-im-freien1&utm_medium=ww-newsletter&utm_source=sale-newsletter&utm_term=1201749002",
+  "request:clientIp": "87.180.31.0",
+  "request:client:country:code:iso": "DE",
+  "request:client:continent:code": "EU",
+  "request:route": "relocation_relocationEntryStep",
+  "request:method": "GET",
+  "request:method:real": "GET",
+  "request:route:params:dataIn": "rSxvGf6",
+  "request:headers:all": {
+    "content-type": [
+      ""
+    ],
+    "content-length": [
+      ""
+    ],
+    "host": [
+      "link.westwing.de"
+    ],
+    "x-real-ip": [
+      "87.180.31.0"
+    ],
+    "x-forwarded-for": [
+      "87.180.31.0"
+    ],
+    "anonymization-ip-hash": [
+      "366f53a9655cd4751c8f3277e8b7c356"
+    ],
+    "connection": [
+      "close"
+    ],
+    "user-agent": [
+      "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0"
+    ],
+    "accept": [
+      "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    ],
+    "accept-language": [
+      "de,en-US;q=0.7,en;q=0.3"
+    ],
+    "accept-encoding": [
+      "gzip, deflate"
+    ],
+    "cookie": [
+      "relocationRSID=fyBsW4URIjpjpy5Ha; relocationUser=JzywEyNiv5Rx2; ww_jid=5702301b359325.30046291"
+    ],
+    "x-php-ob-level": [
+      1
+    ]
+  },
+  "request:server:headers": {
+    "CONTENT_TYPE": "",
+    "CONTENT_LENGTH": "",
+    "HOST": "link.westwing.de",
+    "X_REAL_IP": "87.180.31.0",
+    "X_FORWARDED_FOR": "87.180.31.0",
+    "ANONYMIZATION_IP_HASH": "366f53a9655cd4751c8f3277e8b7c356",
+    "CONNECTION": "close",
+    "USER_AGENT": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0",
+    "ACCEPT": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "ACCEPT_LANGUAGE": "de,en-US;q=0.7,en;q=0.3",
+    "ACCEPT_ENCODING": "gzip, deflate",
+    "COOKIE": "relocationRSID=fyBsW4URIjpjpy5Ha; relocationUser=JzywEyNiv5Rx2; ww_jid=5702301b359325.30046291"
+  },
+  "request:params:all": {
+    "dd_target_url": "www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/?loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002"
+  },
+  "request:userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0",
+  "spec:relocator:params:relocator:target_url": "www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/?loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002",
+  "request:fingerprint:raw": "{\"HTTP_ACCEPT\":\"text\\/html,application\\/xhtml+xml,application\\/xml;q=0.9,*\\/*;q=0.8\",\"HTTP_ACCEPT_LANGUAGE\":\"de,en-US;q=0.7,en;q=0.3\",\"HTTP_ACCEPT_ENCODING\":\"gzip, deflate\",\"HTTP_USER_AGENT\":\"Mozilla\\/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko\\/20100101 Firefox\\/44.0\"}",
+  "request:fingerprint:hash": "140370fd2217d01b57be915ce98cfb84",
+  "request:languages": [
+    "de",
+    "en"
+  ],
+  "request:languages:withVariants": [
+    "de",
+    "en_US",
+    "en"
+  ],
+  "spec:relocator:request:first:time:epoch": 1459761179.5231,
+  "request:client:anonymization:enabled": true,
+  "request:client:anonymization:ip:hash": "366f53a9655cd4751c8f3277e8b7c356",
+  "spec:relocator:session:startedAt": "2016-04-04T09:12:59.545Z",
+  "spec:relocator:session:startedAt:timestamp": 1459761179,
+  "spec:relocator:rsidSource": 2,
+  "spec:relocator:rsidShouldBeValidated": true,
+  "spec:relocator:userIdent": "JzywEyNiv5Rx2",
+  "spec:relocator:userIdentSource": 1,
+  "request:platform": "default",
+  "request:deviceType": "desktop",
+  "request:browser": "other",
+  "request:browserVersion": false,
+  "request:isMobile": false,
+  "spec:relocator:client:os:family": "Windows 7",
+  "spec:relocator:client:os:version": "",
+  "spec:relocator:client:os:version:majorMinor": ".",
+  "spec:relocator:client:device:family": "Other",
+  "spec:relocator:client:ua:family": "Firefox",
+  "spec:relocator:client:ua:model": "Firefox",
+  "spec:relocator:client:ua:version": "44.0",
+  "spec:relocator:client:ua:version:major": "44",
+  "spec:relocator:client:ua:version:majorMinor": "44.0",
+  "spec:relocator:linkCustomer": "westwing",
+  "spec:relocator:linkIdent": "2Mqw94DFkOgA6z5BmbyqGttwo6JGBaYy84DnoPHtHRRJWf1HGlRKsbIXf3plxOooEDwcUAuz",
+  "spec:relocator:linkName": "Newsletter Link DE",
+  "spec:relocator:linkConfigVersion": 1453374132,
+  "spec:relocator:link:mobileApp:id": 1,
+  "spec:relocator:link:mobileApp:name": "Westwing App",
+  "spec:relocator:link:platform:configVersion": 1453374133,
+  "spec:relocator:link:platform:ident": "EB1GO4pvKWjlqM0T5lrTU0gRGSIvhUd5AyLkz06deHEzNwPZlHNjtE9uq0l69GOlNsa53A",
+  "spec:relocator:link:platform:name": "default_desktop",
+  "spec:relocator:link:platform:platform": "default",
+  "spec:relocator:link:platform:deviceType": "desktop",
+  "spec:relocator:appDetectionEnabled": false,
+  "spec:relocator:final": "nonFunctionalRelocation",
+  "spec:relocator:final:case": "nonFunctional",
+  "spec:relocator:final:variant:name": "SAL-9/5819",
+  "spec:relocator:final:action:name": "goToUrl",
+  "spec:relocator:final:isCertain": true,
+  "spec:relocator:final:destinationUrl": "http://www.westwing.de/c-32ad/c-zarte-romanze-im-freien1/?loginHash=55190323ded19ef866fadfe13f93b680&cp=position_4&app_redirect=1&page=cdp&campaign=c-zarte-romanze-im-freien1&utm_source=sale-newsletter&utm_medium=ww-newsletter&utm_content=c-zarte-romanze-im-freien1&utm_campaign=sale-nl-20160321&utm_term=1201749002",
+  "spec:relocator:final:session:duration:serverSide:milliseconds": 35,
+  "execution:profiler:time:toFlush:microseconds": 35889,
+  "spec:relocator:events:time:first": "2016-04-04T09:12:59.558Z",
+  "spec:relocator:events:time:last": "2016-04-04T09:12:59.558Z",
+  "spec:relocator:events:count": 1,
+  "spec:relocator:parsing:last:updatedAt:bucket": "20160404:09:13"
+}
