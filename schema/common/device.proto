@@ -15,12 +15,5 @@ message Device {
     optional string language = 12;
     optional string country = 13;
     optional string city = 14;
-}
-
-message ValueObject {
-    required string value = 1;
-    optional string created_by = 2;
-    optional string modified_by = 3;
-    optional int64 modified_at = 4;
-    optional int64 created_at = 5;
+    optional string ip = 15;
 }

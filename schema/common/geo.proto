@@ -1,0 +1,8 @@
+package d360.common;
+
+message Geo {
+    optional float lat = 1;
+    optional float long = 2;
+    optional string country = 3;
+    optional string city = 4;
+}

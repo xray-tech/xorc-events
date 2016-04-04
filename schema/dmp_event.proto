@@ -1,20 +1,20 @@
 package d360.dmp;
 
-import "common.proto"
+import "common/device.proto"
+import "common/header.proto"
+import "common/geo.proto"
 
 // Confluence documentation:
 // https://360dialog.atlassian.net/wiki/display/RES/Store+data+from+Relocator+on+DMP
 
-message Event {
-    required string name = 1;
-    required int64 time = 2;
-    optional string source = 3;
-    optional string customer_id = 4;
-    optional string app_id = 5;
-    optional string d360_dmp_id = 6;
-    optional RelocatorContext relocator_context = 7;
-    optional d360.common.Device device = 8;
-    optional Geo geo = 9;
+message RelocatorEvent  {
+    optional d360.common.Header header = 1;
+    optional string customer_id = 2;
+    optional string app_id = 3;
+    optional string d360_dmp_id = 4;
+    optional RelocatorContext relocator_context = 5;
+    optional d360.common.Device device = 6;
+    optional d360.common.Geo geo = 7;
 }
 
 message RelocatorContext {
@@ -24,9 +24,3 @@ message RelocatorContext {
     optional string cookie_id = 4;
     optional string app_name = 5;
 }
-
-message Geo {
-    required float lat = 1;
-    required float long = 2;
-}
-
