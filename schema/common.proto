@@ -1,0 +1,26 @@
+package d360.common;
+
+message Device {
+    optional string id = 1;
+    optional string adv_id = 2;  // device advertising id idfa/gaid
+    optional string os = 3;
+    optional string os_ver = 4;
+    optional string brand = 5;
+    optional string model = 6;
+    optional string type = 7;
+    optional string carrier = 8;
+    optional string user_agent = 9;
+    optional string browser_family = 10;
+    optional string browser_ver = 11;
+    optional string language = 12;
+    optional string country = 13;
+    optional string city = 14;
+}
+
+message ValueObject {
+    required string value = 1;
+    optional string created_by = 2;
+    optional string modified_by = 3;
+    optional int64 modified_at = 4;
+    optional int64 created_at = 5;
+}

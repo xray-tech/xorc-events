@@ -1,48 +1,32 @@
-syntax = "proto3";
-package d360.dmp.event;
+package d360.dmp;
+
+import "common.proto"
 
 // Confluence documentation:
 // https://360dialog.atlassian.net/wiki/display/RES/Store+data+from+Relocator+on+DMP
 
 message Event {
-    string name = 1;
-    int64 time = 2;
-    string source = 1;
-    string customer_id = 3;
-    string app_id = 4;
-    string d360_dmp_id = 5;
-    RelocatorContext relocator_context = 6;
-    Device device = 7;
-    Geo geo = 8;
+    required string name = 1;
+    required int64 time = 2;
+    optional string source = 3;
+    optional string customer_id = 4;
+    optional string app_id = 5;
+    optional string d360_dmp_id = 6;
+    optional RelocatorContext relocator_context = 7;
+    optional d360.common.Device device = 8;
+    optional Geo geo = 9;
 }
 
 message RelocatorContext {
-    string rsid = 1;
-    string final_case = 2;
-    string final_action = 3;
-    string cookie_id = 4;
-    string app_name = 5;
-}
-
-message Device {
-    string id = 1;
-    string adv_id = 2;  // device advertising id idfa/gaid
-    string os = 3;
-    string os_ver = 4;
-    string brand = 5;
-    string model = 6;
-    string type = 7;
-    string carrier = 8;
-    string user_agent = 9;
-    string browser_family = 10;
-    string browser_ver = 11;
-    string language = 12;
-    string country = 13;
-    string city = 14;
+    optional string rsid = 1;
+    optional string final_case = 2;
+    optional string final_action = 3;
+    optional string cookie_id = 4;
+    optional string app_name = 5;
 }
 
 message Geo {
-    float lat = 1;
-    float long = 2;
+    required float lat = 1;
+    required float long = 2;
 }
 
