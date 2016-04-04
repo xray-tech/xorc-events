@@ -13,19 +13,19 @@ message Event {
     string d360_dmp_id = 5;
     RelocatorContext relocator_context = 6;
     Device device = 7;
-    Geo geo = 7;
+    Geo geo = 8;
 }
 
 message RelocatorContext {
     string rsid = 1;
     string final_case = 2;
-    string final_action = 2;
-    string cookie_id = 3;
-    string app_name = 4;
+    string final_action = 3;
+    string cookie_id = 4;
+    string app_name = 5;
 }
 
 message Device {
-    string adv_id = 2;
+    string id = 1;
     string adv_id = 2;  // device advertising id idfa/gaid
     string os = 3;
     string os_ver = 4;
@@ -38,7 +38,7 @@ message Device {
     string browser_ver = 11;
     string language = 12;
     string country = 13;
-    string city = 13;
+    string city = 14;
 }
 
 message Geo {
