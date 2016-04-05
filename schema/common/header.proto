@@ -1,0 +1,6 @@
+package common;
+
+message Header {
+    optional int64 created_at = 2;
+    optional string source = 3;
+}
