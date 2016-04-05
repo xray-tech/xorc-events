@@ -1,4 +1,4 @@
-package d360.common;
+package common;
 
 message Geo {
     optional float lat = 1;
