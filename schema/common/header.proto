@@ -1,6 +1,9 @@
 package common;
 
 message Header {
-    optional int64 created_at = 2;
-    optional string source = 3;
+    // Time when the event occured (in milliseconds since Unix epoch)
+    required int64 created_at = 2;
+
+    // A string identifiying the origin of the events (for instance "relocator") 
+    required string source = 3;
 }

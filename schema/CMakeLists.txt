@@ -5,6 +5,8 @@ set(proto-files
     common/device.proto
     common/geo.proto
     common/header.proto
+    common/browser.proto
+    common/carrier.proto
 )
 
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS 
