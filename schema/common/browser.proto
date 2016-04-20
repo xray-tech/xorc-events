@@ -1,0 +1,8 @@
+package common;
+
+message Browser
+{
+    optional string ua = 1;         // The full User-Agent string
+    optional string name = 2;       // The name of the broswer e.g. "chrome.
+    optional string version = 3;    // The version of the browser
+}

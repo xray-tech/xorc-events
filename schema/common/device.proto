@@ -1,33 +1,33 @@
 package common;
 
-// documentation: https://360dialog.atlassian.net/wiki/display/RES/Store+data+from+Relocator+on+DMP
+import "common/carrier.proto";
+import "common/browser.proto";
 
-message Device {
+// Information relating to a mobile device.
+message Device 
+{
     optional string id = 1;
-    optional string ifa = 2;  // Advertiser id (IDFA / GAID)
+    optional string ifa = 2;  
     optional string os = 3;
     optional string osv = 4;
     optional string make = 5;
     optional string brand = 6;
     optional string model = 7;
     optional string type = 8;
-    optional string carriername = 9;
-    optional string carriericc = 10;
-    optional string carriermcc = 11;
-    optional string carriermnc = 12;
-    optional string ua = 13;
-    optional string browser = 14;
-    optional string browserv = 15;
-    optional string locale = 16;
-    optional string dnt = 17;
-    optional string hwv = 18;
-    optional string h = 19;
-    optional string w = 20;
-    optional string ppi = 21;
-    optional string connectiontype = 22;
-    optional string jailbroken = 23;
-    optional string language = 24;
-    optional string ip = 25;
-    optional string country = 26;
-    optional string city = 27;
+    optional Carrier carrier = 9;
+    optional Browser browser = 10; 
+    optional string locale = 11;
+    optional string dnt = 12;
+    optional string hwv = 13;
+    optional string h = 14;
+    optional string w = 15;
+    optional string ppi = 16;
+    optional string connectiontype = 17;
+    optional string jailbroken = 18;
+    optional string language = 19;
+    optional string ip = 20;
+    optional string country = 21;
+    optional string city = 22;
 }
+
+

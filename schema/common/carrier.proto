@@ -1,0 +1,10 @@
+package common;
+
+// Information about the carrier a mobile device is using.
+message Carrier
+{
+    optional string name = 1; // Carrier name, e.g. "Verizon"
+    optional string icc = 2; // SIM card identifier. 
+    optional string mcc = 3; // Mobile country code.
+    optional string mnc = 4; // Mobile network code
+}

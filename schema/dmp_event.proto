@@ -2,25 +2,25 @@ package dmp;
 
 import "common/device.proto";
 import "common/header.proto";
-import "common/geo.proto";
 
 // Confluence documentation:
 // https://360dialog.atlassian.net/wiki/display/RES/Store+data+from+Relocator+on+DMP
 
-message RelocatorEvent {
-    optional common.Header header = 1;
-    optional string customer_id = 2;
-    optional string app_id = 3;
-    optional string d360_dmp_id = 4;
-    optional RelocatorContext relocator_context = 5;
-    optional common.Device device = 6;
-    optional common.Geo geo = 7;
-}
 
-message RelocatorContext {
-    optional string rsid = 1;
-    optional string final_case = 2;
-    optional string final_action = 3;
-    optional string cookie_id = 4;
-    optional string app_name = 5;
+
+message RelocatorEvent 
+{
+    required common.Header header = 1;
+
+    // Information about the mobile device, if available.
+    optional common.Device device = 2;
+
+    // Relocator specific information
+    optional string app_id = 3;
+    optional string app_name = 4;
+    optional string customer_id = 5;
+    optional string rsid = 6;
+    optional string final_case = 7;
+    optional string final_action = 8;
+    optional string cookie_id = 9;
 }
