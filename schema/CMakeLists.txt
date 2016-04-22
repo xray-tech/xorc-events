@@ -1,3 +1,4 @@
+
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 set(proto-files 
     dmp_event.proto
@@ -9,16 +10,16 @@ set(proto-files
     common/carrier.proto
 )
 
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS 
-    ${proto-files}
-)
+# Generates the matching source files for each proto file
+add_custom_target(generated_sources ALL)
+add_custom_command(TARGET generated_sources PRE_BUILD COMMAND make -C ${CMAKE_CURRENT_SOURCE_DIR} -f Makefile.sources sources)
 
 set(cpp_sources)
 set(cpp_headers)
 set(python_sources)
 foreach(proto ${proto-files})
     string(REPLACE ".proto" "" proto-basename ${proto})
-    set(root "${CMAKE_CURRENT_BINARY_DIR}/${proto-basename}")
+    set(root "${CMAKE_CURRENT_SOURCE_DIR}/${proto-basename}")
     set(cpp_sources ${cpp_sources} "${root}.pb.cc" "${root}.pb.h")
     set(cpp_headers ${cpp_headers} "${root}.pb.h")
     set(python_sources ${python_sources} "${root}_pb2.py")
@@ -27,20 +28,11 @@ foreach(proto ${proto-files})
     set_source_files_properties("${root}_pb2.py" PROPERTIES GENERATED TRUE)
 endforeach()
 
-add_library(event-format
-        ${cpp_sources}
-    )
 
+add_library(event-format ${cpp_sources})
+add_dependencies(event-format generated_sources)
 target_link_libraries(event-format ${PROTOBUF_LIBRARIES})
-
-target_include_directories(event-format PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
-
-protobuf_generate_python(py ${proto-files})
-
-add_custom_target(generated_code DEPENDS ${PROTO_SRCS} ${PROTO_HDRS} ${py})
-
-# Force the protobuf invocation
-add_dependencies(event-format generated_code)
+target_include_directories(event-format PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 find_package(PythonInterp)
 execute_process(COMMAND ${PYTHON_EXECUTABLE} -c "from distutils import sysconfig; print( sysconfig.get_python_lib( plat_specific=True, prefix='${CMAKE_INSTALL_PREFIX}' ) )"
