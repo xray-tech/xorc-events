@@ -1,0 +1,12 @@
+
+package dmp;
+
+import "common/header.proto";
+
+message AdjustEvent
+{
+    optional common.Header header = 1;
+
+    // The track_type, aka the name of the event
+    optional string track_type    = 2;
+}
