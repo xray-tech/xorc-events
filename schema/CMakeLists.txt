@@ -2,6 +2,7 @@
 include_directories(${PROTOBUF_INCLUDE_DIRS})
 set(proto-files 
     dmp_event.proto
+    adjust_event.proto
 
     common/device.proto
     common/geo.proto
