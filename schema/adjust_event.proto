@@ -1,5 +1,5 @@
 
-package dmp;
+package d360;
 
 import "common/header.proto";
 
