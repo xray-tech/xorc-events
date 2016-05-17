@@ -1,0 +1,20 @@
+package http;
+
+import "common/map_field_entry.proto";
+
+message HttpRequestEvent
+{
+  enum HttpVerb {
+    GET = 0;
+    POST = 1;
+    PUT = 2;
+    DELETE = 3;
+  }
+
+  required string id = 1;
+  required string uri = 2;
+  optional HttpVerb request_type = 3 [default = GET];
+  repeated common.MapFieldEntry params = 4;
+  repeated common.MapFieldEntry headers = 5;
+  optional string body = 6;
+}
