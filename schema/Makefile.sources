@@ -1,5 +1,5 @@
 
-PROTO := $(wildcard *.proto) $(wildcard common/*.proto)
+PROTO := $(wildcard *.proto) $(wildcard */*.proto)
 CPP_HEADERS = $(PROTO:.proto=.pb.h)
 
 %.pb.h %.pb.cc: %.proto
