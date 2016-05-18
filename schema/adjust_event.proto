@@ -2,11 +2,11 @@
 package d360;
 
 import "common/header.proto";
+import "common/map_field_entry.proto";
 
 message AdjustEvent
 {
     optional common.Header header = 1;
+    repeated common.MapFieldEntry params = 2;
+};
 
-    // The track_type, aka the name of the event
-    optional string track_type    = 2;
-}
