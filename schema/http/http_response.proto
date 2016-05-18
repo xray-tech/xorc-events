@@ -1,0 +1,7 @@
+package http;
+
+message HttpResponse
+{
+  optional int32 status_code = 1;
+  optional string response_body = 2;
+}

@@ -1,7 +1,0 @@
-package http;
-
-message HttpResponseEvent
-{
-  required string id = 1;
-  required int32 status_code = 2;
-}
