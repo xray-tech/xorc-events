@@ -5,7 +5,7 @@ set(proto-files
     adjust_event.proto
 
     http/http_request_event.proto
-    http/http_response_event.proto
+    http/http_response.proto
     common/device.proto
     common/geo.proto
     common/header.proto
