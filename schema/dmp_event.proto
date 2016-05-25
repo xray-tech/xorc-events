@@ -16,11 +16,12 @@ message RelocatorEvent
     optional common.Device device = 2;
 
     // Relocator specific information
-    optional string app_id = 3;
+    optional string internal_app_id = 3;
     optional string app_name = 4;
     optional string customer_id = 5;
     optional string rsid = 6;
     optional string final_case = 7;
     optional string final_action = 8;
     optional string cookie_id = 9;
+    optional string app_store_id = 10;
 }
