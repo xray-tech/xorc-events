@@ -1,0 +1,7 @@
+package notification;
+
+message Apn
+{
+  required string device_token = 1;
+  required string message = 2;
+}
