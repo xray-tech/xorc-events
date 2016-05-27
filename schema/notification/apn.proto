@@ -3,5 +3,6 @@ package notification;
 message Apn
 {
   required string device_token = 1;
-  required string message = 2;
+  required string application_id = 2;
+  optional string message = 3;
 }
