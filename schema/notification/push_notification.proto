@@ -1,6 +1,7 @@
 package notification;
 
 import "notification/apns_headers.proto";
+import "notification/apns_result.proto";
 
 message PushNotification
 {
@@ -8,4 +9,5 @@ message PushNotification
   required string application_id = 2;
   optional string message = 3;
   optional notification.ApnsHeaders apns_headers = 4;
+  optional notification.ApnsResult apns_result = 5;
 }
