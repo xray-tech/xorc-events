@@ -1,10 +1,7 @@
 package notification;
 
-message Apn
+message ApnsHeaders
 {
-  required string device_token = 1;
-  required string application_id = 2;
-  optional string message = 3;
   optional string apns_id = 4;
   optional int64 apns_expiration = 5;
   optional uint32 apns_priority = 6;

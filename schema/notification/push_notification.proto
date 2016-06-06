@@ -1,0 +1,11 @@
+package notification;
+
+import "notification/apns_headers.proto";
+
+message PushNotification
+{
+  required string device_token = 1;
+  required string application_id = 2;
+  optional string message = 3;
+  optional notification.ApnsHeaders apns_headers = 4;
+}
