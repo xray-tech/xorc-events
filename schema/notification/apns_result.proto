@@ -2,6 +2,15 @@ package notification;
 
 message ApnsResult
 {
+  enum Status {
+    Success = 0;
+    BadRequest = 1;
+    Error = 2;
+    MissingChannel = 3;
+    Timeout = 4;
+    Unknown = 5;
+  }
+
   enum Reason {
     PayloadEmpty = 0;
     PayloadTooLarge = 1;
@@ -26,12 +35,10 @@ message ApnsResult
     InternalServerError = 20;
     ServiceUnavailable = 21;
     MissingTopic = 22;
-    MissingChannel = 23;
-    Timeout = 24;
-    Unknown = 25;
   }
 
   required bool successful = 1;
+  optional Status status = 2;
   optional Reason reason = 3;
   optional uint64 timestamp = 4;
 }
