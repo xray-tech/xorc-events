@@ -10,4 +10,5 @@ message PushNotification
   optional string message = 3;
   optional notification.ApnsHeaders apns_headers = 4;
   optional notification.ApnsResult apns_result = 5;
+  optional string correlation_id = 6;
 }
