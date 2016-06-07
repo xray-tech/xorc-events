@@ -35,6 +35,7 @@ message ApnsResult
     InternalServerError = 20;
     ServiceUnavailable = 21;
     MissingTopic = 22;
+    MissingCertificate = 23;
   }
 
   required bool successful = 1;
