@@ -19,11 +19,14 @@ message AppleNotification
 {
   optional notification.ApnsHeaders apns_headers = 1;
   optional notification.ApnsResult  apns_result  = 2;
+  optional uint32                   badge        = 3;
+  optional string                   sound        = 4;
+  optional string                   category     = 5;
 
   oneof type {
-    AppleLocalizedAlert localized = 3;
-    string              plain     = 4;
-    uint32              silent    = 5;
+    AppleLocalizedAlert localized = 6;
+    string              plain     = 7;
+    uint32              silent    = 8;
   }
 }
 
