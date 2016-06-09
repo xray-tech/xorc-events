@@ -3,12 +3,34 @@ package notification;
 import "notification/apns_headers.proto";
 import "notification/apns_result.proto";
 
+message AppleLocalizedAlert
+{
+  optional string title          = 1;
+  optional string body           = 2;
+  optional string title_loc_key  = 3;
+  repeated string title_loc_args = 4;
+  optional string action_loc_key = 5;
+  optional string loc_key        = 6;
+  repeated string loc_args       = 7;
+  optional string launch_image   = 8;
+}
+
+message AppleNotification
+{
+  optional notification.ApnsHeaders apns_headers = 1;
+  optional notification.ApnsResult  apns_result  = 2;
+
+  oneof type {
+    AppleLocalizedAlert localized = 3;
+    string              plain     = 4;
+    uint32              silent    = 5;
+  }
+}
+
 message PushNotification
 {
-  required string device_token = 1;
-  required string application_id = 2;
-  optional string message = 3;
-  optional notification.ApnsHeaders apns_headers = 4;
-  optional notification.ApnsResult apns_result = 5;
-  optional string correlation_id = 6;
+  required string            device_token   = 1;
+  required string            application_id = 2;
+  optional string            correlation_id = 3;
+  required AppleNotification notification   = 4;
 }
