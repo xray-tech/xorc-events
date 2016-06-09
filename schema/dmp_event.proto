@@ -24,7 +24,4 @@ message RelocatorEvent
     optional string final_action = 8;
     optional string cookie_id = 9;
     optional string app_store_id = 10;
-
-    // map of query params from request:params:all (the Smart App Link url)
-    repeated common.MapFieldEntry request_params = 11; 
 }
