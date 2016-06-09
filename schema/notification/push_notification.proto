@@ -18,22 +18,22 @@ message AppleLocalizedAlert
 message AppleNotification
 {
   optional notification.ApnsHeaders apns_headers = 1;
-  optional notification.ApnsResult  apns_result  = 2;
-  optional uint32                   badge        = 3;
-  optional string                   sound        = 4;
-  optional string                   category     = 5;
+  optional uint32                   badge        = 2;
+  optional string                   sound        = 3;
+  optional string                   category     = 4;
 
   oneof type {
-    AppleLocalizedAlert localized = 6;
-    string              plain     = 7;
-    uint32              silent    = 8;
+    AppleLocalizedAlert localized = 5;
+    string              plain     = 6;
+    uint32              silent    = 7;
   }
 }
 
 message PushNotification
 {
-  required string            device_token   = 1;
-  required string            application_id = 2;
-  optional string            correlation_id = 3;
-  required AppleNotification notification   = 4;
+  required string                   device_token   = 1;
+  required string                   application_id = 2;
+  optional string                   correlation_id = 3;
+  required AppleNotification        notification   = 4;
+  optional notification.ApnsResult  apns_result    = 5;
 }
