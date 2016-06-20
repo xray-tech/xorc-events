@@ -1,8 +1,9 @@
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
-set(proto-files 
+set(proto-files
     dmp_event.proto
     adjust_event.proto
+    routable_message.proto
 
     http/http_request_event.proto
     http/http_response.proto

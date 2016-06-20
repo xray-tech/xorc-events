@@ -6,4 +6,7 @@ message Header {
 
     // A string identifiying the origin of the events (for instance "relocator") 
     required string source = 3;
+
+    // GetTypeName value
+    required string type = 4;
 }
