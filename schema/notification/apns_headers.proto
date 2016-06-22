@@ -1,8 +1,0 @@
-package notification;
-
-message ApnsHeaders
-{
-  optional int64 apns_expiration = 4;
-  optional uint32 apns_priority = 5;
-  optional string apns_topic = 6;
-}

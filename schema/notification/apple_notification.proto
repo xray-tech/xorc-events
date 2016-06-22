@@ -1,0 +1,81 @@
+package notification;
+
+message ApnsHeaders
+{
+  optional int64  apns_expiration = 4;
+  optional uint32 apns_priority   = 5;
+  optional string apns_topic      = 6;
+}
+
+message ApnsResult
+{
+  enum Status
+  {
+    Success        = 0;
+    BadRequest     = 1;
+    Error          = 2;
+    MissingChannel = 3;
+    Timeout        = 4;
+    Unknown        = 5;
+  }
+
+  enum Reason {
+    PayloadEmpty              = 0;
+    PayloadTooLarge           = 1;
+    BadTopic                  = 2;
+    TopicDisallowed           = 3;
+    BadMessageId              = 4;
+    BadExpirationDate         = 5;
+    BadPriority               = 6;
+    MissingDeviceToken        = 7;
+    BadDeviceToken            = 8;
+    DeviceTokenNotForTopic    = 9;
+    Unregistered              = 10;
+    DuplicateHeaders          = 11;
+    BadCertificateEnvironment = 12;
+    BadCertificate            = 13;
+    Forbidden                 = 14;
+    BadPath                   = 15;
+    MethodNotAllowed          = 16;
+    TooManyRequests           = 17;
+    IdleTimeout               = 18;
+    Shutdown                  = 19;
+    InternalServerError       = 20;
+    ServiceUnavailable        = 21;
+    MissingTopic              = 22;
+    MissingCertificate        = 23;
+  }
+
+  required bool   successful = 1;
+  optional Status status     = 2;
+  optional Reason reason     = 3;
+  optional int64  timestamp  = 4;
+}
+
+message AppleLocalizedAlert
+{
+  required string title          = 1;
+  required string body           = 2;
+  optional string title_loc_key  = 3;
+  repeated string title_loc_args = 4;
+  optional string action_loc_key = 5;
+  required string loc_key        = 6;
+  repeated string loc_args       = 7;
+  optional string launch_image   = 8;
+}
+
+message AppleNotification
+{
+  optional ApnsHeaders headers      = 1;
+  optional uint32      badge        = 2;
+  optional string      sound        = 3;
+  optional string      category     = 4;
+  optional ApnsResult  result       = 5;
+
+  oneof type
+  {
+    AppleLocalizedAlert localized = 6;
+    string              plain     = 7;
+    uint32              silent    = 8;
+  }
+}
