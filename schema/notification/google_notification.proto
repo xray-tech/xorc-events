@@ -1,0 +1,58 @@
+package notification;
+
+import "common/map_field_entry.proto";
+
+message GoogleLocalizedAlert
+{
+  required string title          = 1;
+  optional string body           = 2;
+  optional string icon           = 3;
+  optional string sound          = 4;
+  optional string badge          = 5;
+  optional string tag            = 6;
+  optional string color          = 7;
+  optional string click_action   = 8;
+  optional string body_loc_key   = 9;
+  repeated string body_loc_args  = 10;
+  optional string title_loc_key  = 11;
+  repeated string title_loc_args = 12;
+}
+
+message FcmMessageResult
+{
+  optional string message_id      = 1;
+  optional string registration_id = 2;
+  optional string error           = 3;
+}
+
+message FcmResponse
+{
+  required bool             successful    = 1;
+  optional uint64           message_id    = 2;
+  optional string           error         = 3;
+  optional uint64           multicast_id  = 4;
+  optional uint64           failure       = 5;
+  optional uint64           canonical_ids = 6;
+  repeated FcmMessageResult results       = 7;
+}
+
+message GoogleNotification
+{
+  enum FcmError
+  {
+    Unauthorized   = 1;
+    InvalidMessage = 2;
+    ServerError    = 3;
+  }
+
+  optional FcmResponse response     = 1;
+  optional FcmError    error        = 2;
+  optional string      error_reason = 3;
+
+  oneof type
+  {
+    common.MapFieldEntry message   = 4;
+    GoogleLocalizedAlert localized = 5;
+  }
+}
+
