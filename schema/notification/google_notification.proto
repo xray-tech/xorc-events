@@ -18,6 +18,11 @@ message GoogleLocalizedAlert
   repeated string title_loc_args = 12;
 }
 
+message GoogleMessage
+{
+  repeated common.MapFieldEntry key_value = 1;
+}
+
 message FcmMessageResult
 {
   optional string message_id      = 1;
@@ -51,7 +56,7 @@ message GoogleNotification
 
   oneof type
   {
-    common.MapFieldEntry message   = 4;
+    GoogleMessage        message   = 4;
     GoogleLocalizedAlert localized = 5;
   }
 }
