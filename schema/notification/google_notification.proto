@@ -45,13 +45,13 @@ message FcmResult
     Unknown                   = 16;
   }
 
-  required bool   successful      = 1;
-  optional Status status          = 2;
-  optional int64  multicast_id    = 3;
-  optional uint64 canonical_ids   = 4;
-  optional string message_id      = 5;
-  optional string registration_id = 6;
-  optional string error           = 7;
+  required bool   successful       = 1;
+  optional Status status           = 2;
+  optional int64  multicast_id     = 3;
+  optional uint64 canonical_ids    = 4;
+  optional string message_id       = 5;
+  optional string registration_id  = 6;
+  optional string error            = 7;
 }
 
 message GoogleNotification
