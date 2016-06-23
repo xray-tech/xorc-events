@@ -52,10 +52,9 @@ message FcmResponse
   optional Status status          = 2;
   optional Reason reason          = 3;
   optional uint64 multicast_id    = 4;
-  optional uint64 failure         = 5;
-  optional uint64 canonical_ids   = 6;
-  optional string message_id      = 7;
-  optional string registration_id = 8;
+  optional uint64 canonical_ids   = 5;
+  optional string message_id      = 6;
+  optional string registration_id = 7;
 }
 
 message GoogleNotification
