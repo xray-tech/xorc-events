@@ -23,41 +23,49 @@ message GoogleMessage
   repeated common.MapFieldEntry key_value = 1;
 }
 
-message FcmMessageResult
-{
-  optional string message_id      = 1;
-  optional string registration_id = 2;
-  optional string error           = 3;
-}
-
 message FcmResponse
 {
-  required bool             successful    = 1;
-  optional uint64           message_id    = 2;
-  optional string           error         = 3;
-  optional uint64           multicast_id  = 4;
-  optional uint64           failure       = 5;
-  optional uint64           canonical_ids = 6;
-  repeated FcmMessageResult results       = 7;
+  enum Status
+  {
+    Success        = 1;
+    Unauthorized   = 2;
+    InvalidMessage = 3;
+    ServerError    = 4;
+  }
+
+  enum Reason
+  {
+    MissingRegistration       = 1;
+    InvalidRegistration       = 2;
+    NotRegistered             = 3;
+    InvalidPackageName        = 4;
+    MismatchSenderId          = 5;
+    MessageTooBig             = 6;
+    InvalidDataKey            = 7;
+    InvalidTtl                = 8;
+    Unavailable               = 9;
+    DeviceMessageRateExceeded = 10;
+    TopicsMessageRateExceeded = 11;
+  }
+
+  required bool   successful      = 1;
+  optional Status status          = 2;
+  optional Reason reason          = 3;
+  optional uint64 multicast_id    = 4;
+  optional uint64 failure         = 5;
+  optional uint64 canonical_ids   = 6;
+  optional string message_id      = 7;
+  optional string registration_id = 8;
 }
 
 message GoogleNotification
 {
-  enum FcmError
-  {
-    Unauthorized   = 1;
-    InvalidMessage = 2;
-    ServerError    = 3;
-  }
-
   optional FcmResponse response     = 1;
-  optional FcmError    error        = 2;
-  optional string      error_reason = 3;
 
   oneof type
   {
-    GoogleMessage        message   = 4;
-    GoogleLocalizedAlert localized = 5;
+    GoogleMessage        message   = 2;
+    GoogleLocalizedAlert localized = 3;
   }
 }
 
