@@ -56,12 +56,26 @@ message FcmResult
 
 message GoogleNotification
 {
-  optional FcmResult response     = 1;
+  enum Priority
+  {
+    Normal = 1;
+    High   = 2;
+  }
+
+  optional FcmResult   response                = 1;
+  repeated string      registration_ids        = 2;
+  optional string      collapse_key            = 3;
+  optional Priority    priority                = 4;
+  optional bool        content_available       = 5;
+  optional bool        delay_while_idle        = 6;
+  optional int32       time_to_live            = 7;
+  optional string      restricted_package_name = 8;
+  optional bool        dry_run                 = 9;
 
   oneof type
   {
-    GoogleMessage        message   = 2;
-    GoogleLocalizedAlert localized = 3;
+    GoogleMessage        message   = 10;
+    GoogleLocalizedAlert localized = 11;
   }
 }
 
