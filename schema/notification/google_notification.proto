@@ -42,7 +42,8 @@ message FcmResult
     Unavailable               = 13;
     DeviceMessageRateExceeded = 14;
     TopicsMessageRateExceeded = 15;
-    Unknown                   = 16;
+    MissingCertificate        = 16;
+    Unknown                   = 17;
   }
 
   required bool   successful       = 1;
