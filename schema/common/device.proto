@@ -24,10 +24,12 @@ message Device
     optional string ppi = 16;
     optional string connectiontype = 17;
     optional string jailbroken = 18;
+
     optional string language = 19;
     optional string ip = 20;
     optional string country = 21;
     optional string city = 22;
+    optional string timezone = 23;
 }
 
 

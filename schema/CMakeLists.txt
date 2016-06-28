@@ -4,6 +4,8 @@ set(proto-files
     dmp_event.proto
     adjust_event.proto
     routable_message.proto
+    sdk_event.proto
+    system_event.proto
 
     http/http_request_event.proto
     http/http_response.proto
