@@ -1,0 +1,10 @@
+package events;
+
+import "common/header.proto";
+
+message SystemEvent
+{
+    required common.Header header = 1;
+}
+
+
