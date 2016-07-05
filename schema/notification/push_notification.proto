@@ -2,6 +2,7 @@ package notification;
 
 import "notification/apple_notification.proto";
 import "notification/google_notification.proto";
+import "common/header.proto";
 
 message PushNotification
 {
@@ -14,4 +15,6 @@ message PushNotification
     notification.AppleNotification  apple  = 5;
     notification.GoogleNotification google = 6;
   }
+
+  required Header header = 7;
 }
