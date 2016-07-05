@@ -16,5 +16,5 @@ message PushNotification
     notification.GoogleNotification google = 6;
   }
 
-  required Header header = 7;
+  required common.Header header = 7;
 }
