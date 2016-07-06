@@ -4,13 +4,14 @@ import "common/carrier.proto";
 import "common/browser.proto";
 
 // Information relating to a mobile device.
-message Device 
+message Device
 {
     optional string id = 1;
-    optional string ifa = 2;  
+    optional string ifa = 2;
     optional string os = 3;
     optional string osv = 4;
     optional string make = 5;
+    optional string manufacturer = 24;
     optional string brand = 6;
     optional string model = 7;
     optional string type = 8;
