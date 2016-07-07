@@ -7,8 +7,3 @@ message RoutableMessage
     required common.Header header = 1;
 }
 
-message dummy
-{
-    required common.Header header = 1;
-    optional string test = 2;
-}

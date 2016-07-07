@@ -7,4 +7,3 @@ message SystemEvent
     required common.Header header = 1;
 }
 
-
