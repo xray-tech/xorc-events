@@ -7,8 +7,9 @@ message SDKEnvironment
 {
   optional string sdk_version = 1;
   optional string app_version = 2;
-  optional string app_identifier = 3;
-  optional string app_instance_id = 4;
+  optional string app_store_id = 3;
+  optional string app_id = 4;
+  optional string app_instance_id = 5;
 }
 
 message SDKEventData
