@@ -15,6 +15,9 @@ set(proto-files
     common/browser.proto
     common/carrier.proto
     common/map_field_entry.proto
+
+    # Test proto file
+    dummy.proto
 )
 
 # Generates the matching source files for each proto file
