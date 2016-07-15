@@ -27,6 +27,7 @@ message Dummy {
   optional Enum enum_field = 15 [default = RANDOM];
 
   message Internal {
+    optional string test_str = 1;
   }
 
   optional Internal internal = 16;
