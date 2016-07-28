@@ -5,5 +5,11 @@ import "common/header.proto";
 message SystemEvent
 {
     required common.Header header = 1;
+    required string name = 2;
 }
+
+message RuleEngineTick
+{
+    required common.Header header = 1;
+};
 
