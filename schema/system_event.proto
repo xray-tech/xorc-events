@@ -22,7 +22,7 @@ message Timer
     CANCEL = 2;
   }
 
-  required Action action = 2 [default=CREATE];
+  optional Action action = 2 [default=CREATE];
 
   oneof timer {
     // timestamp in second
