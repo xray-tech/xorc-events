@@ -11,5 +11,44 @@ message SystemEvent
 message RuleEngineTick
 {
     required common.Header header = 1;
-};
+}
 
+message Timer
+{
+  required common.Header header = 1;
+
+  enum Action {
+    CREATE = 1;
+    CANCEL = 2;
+  }
+
+  required Action action = 2 [default=CREATE];
+
+  oneof timer {
+    // timestamp in second
+    uint64 expire_at = 7;
+    // relative to when the message is received, in second.
+    uint64 expire_in = 8;
+  }
+
+  // Id set by the emitter so it can match a TimerExpired message
+  // Expected to be a UUID
+  required string correlation_id = 3;
+
+  // Who's interested in getting the TimerExpired...
+  optional string recipient_id = 4;
+
+  // ... in which universe
+  optional string universe = 5;
+
+  // ... listening which exchange
+  optional string exchange = 6;
+}
+
+message TimerExpired
+{
+  required common.Header header = 1;
+
+  required string correlation_id = 2;
+  optional string universe = 3;
+}
