@@ -24,13 +24,6 @@ message Timer
 
   optional Action action = 2 [default=CREATE];
 
-  oneof timer {
-    // timestamp in second
-    uint64 expire_at = 7;
-    // relative to when the message is received, in second.
-    uint64 expire_in = 8;
-  }
-
   // Id set by the emitter so it can match a TimerExpired message
   // Expected to be a UUID
   required string correlation_id = 3;
@@ -43,6 +36,10 @@ message Timer
 
   // ... listening which exchange
   optional string exchange = 6;
+
+  // timestamp in second from epoch
+  required uint64 expire_at = 7;
+
 }
 
 message TimerExpired
