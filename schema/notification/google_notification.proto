@@ -4,23 +4,24 @@ import "common/map_field_entry.proto";
 
 message GoogleLocalizedAlert
 {
-  required string title          = 1;
-  optional string body           = 2;
-  optional string icon           = 3;
-  optional string sound          = 4;
-  optional string badge          = 5;
-  optional string tag            = 6;
-  optional string color          = 7;
-  optional string click_action   = 8;
-  optional string body_loc_key   = 9;
-  repeated string body_loc_args  = 10;
-  optional string title_loc_key  = 11;
-  repeated string title_loc_args = 12;
+  required string title              = 1;
+  optional string body               = 2;
+  optional string icon               = 3;
+  optional string sound              = 4;
+  optional string badge              = 5;
+  optional string tag                = 6;
+  optional string color              = 7;
+  optional string click_action       = 8;
+  optional string body_loc_key       = 9;
+  repeated string body_loc_args      = 10;
+  optional string title_loc_key      = 11;
+  repeated string title_loc_args     = 12;
+  repeated common.MapFieldEntry data = 13;
 }
 
 message GoogleMessage
 {
-  repeated common.MapFieldEntry key_value = 1;
+  repeated common.MapFieldEntry data = 1;
 }
 
 message FcmResult
