@@ -64,6 +64,12 @@ message AppleLocalizedAlert
   optional string launch_image   = 8;
 }
 
+message CustomData
+{
+  required string key  = 1;
+  required string body = 2;
+}
+
 message AppleNotification
 {
   optional ApnsHeaders headers      = 1;
@@ -78,4 +84,6 @@ message AppleNotification
     string              plain     = 7;
     uint32              silent    = 8;
   }
+
+  optional CustomData   custom_data  = 9;
 }
