@@ -38,7 +38,7 @@ message Timer
   optional string exchange = 6;
 
   // timestamp in second from epoch
-  required uint64 expire_at = 7;
+  optional uint64 expire_at = 7;
 
 }
 
