@@ -6,4 +6,16 @@ message Header {
 
     // A string identifiying the origin of the events (for instance "relocator") 
     required string source = 3;
+
+    // must be equal to the GetTypeName of the most derived message
+    optional string type = 4;
+
+    // Feed to which the message belong. This is specific by source.
+    // For a customer X and our sdk event, the source and feed would be:
+    // source = "X"
+    // feed = "360dialog_sdk"
+    optional string feed = 5;
+
+    // Optional recipient id.
+    optional string recipient_id = 6;
 }

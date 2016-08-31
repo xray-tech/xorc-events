@@ -1,8 +1,11 @@
 
 include_directories(${PROTOBUF_INCLUDE_DIRS})
-set(proto-files 
+set(proto-files
     dmp_event.proto
     adjust_event.proto
+    routable_message.proto
+    sdk_event.proto
+    system_event.proto
 
     http/http_request_event.proto
     http/http_response.proto
@@ -12,6 +15,9 @@ set(proto-files
     common/browser.proto
     common/carrier.proto
     common/map_field_entry.proto
+
+    # Test proto file
+    dummy.proto
 )
 
 # Generates the matching source files for each proto file

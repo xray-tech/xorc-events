@@ -1,0 +1,51 @@
+package events;
+
+import "common/header.proto";
+
+message SystemEvent
+{
+    required common.Header header = 1;
+    required string name = 2;
+}
+
+message RuleEngineTick
+{
+    required common.Header header = 1;
+}
+
+message Timer
+{
+  required common.Header header = 1;
+
+  enum Action {
+    CREATE = 1;
+    CANCEL = 2;
+  }
+
+  optional Action action = 2 [default=CREATE];
+
+  // Id set by the emitter so it can match a TimerExpired message
+  // Expected to be a UUID
+  required string correlation_id = 3;
+
+  // Who's interested in getting the TimerExpired...
+  optional string recipient_id = 4;
+
+  // ... in which universe
+  optional string universe = 5;
+
+  // ... listening which exchange
+  optional string exchange = 6;
+
+  // timestamp in second from epoch
+  optional uint64 expire_at = 7;
+
+}
+
+message TimerExpired
+{
+  required common.Header header = 1;
+
+  required string correlation_id = 2;
+  optional string universe = 3;
+}
