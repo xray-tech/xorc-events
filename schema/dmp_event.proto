@@ -26,4 +26,9 @@ message RelocatorEvent
 
     // Request paramaters for the Smart App Link url (defined by request:params:all in the JSON).
     repeated common.MapFieldEntry request_params = 11;
+
+    // String defining the type of request from the relocator:
+    // * "click" is sent immediately. 
+    // * "full" is sent once session is stable.
+    optional string request_type = 12;
 }
