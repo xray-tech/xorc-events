@@ -1,0 +1,41 @@
+package events;
+
+import "common/header.proto";
+import "common/device.proto";
+
+message Environment
+{
+  optional string sdk_version = 1;
+  optional string app_version = 2;
+  optional string app_store_id = 3;
+  optional string app_id = 4;
+  optional string app_instance_id = 5;
+}
+
+message EventData
+{
+  optional string id = 1;
+
+  // campaign events like push_sent, action_triggered, push_error,
+  // but it can also be information not related to campaign for example that user uninstalled app,
+  // or some action was triggered via external api
+  optional string name = 2;
+  optional string entity_id = 3;
+
+  message Property
+  {
+    required string key = 1;
+    optional string value = 2;
+  }
+
+  repeated Property properties = 4;
+}
+
+message BackendEvent
+{
+    required common.Header header = 1;
+    optional Environment environment = 2;
+    optional EventData event = 3;
+    optional common.Device device = 4;
+}
+
