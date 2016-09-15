@@ -6,6 +6,7 @@ set(proto-files
     routable_message.proto
     sdk_event.proto
     system_event.proto
+    backend_event.proto
 
     http/http_request_event.proto
     http/http_response.proto
