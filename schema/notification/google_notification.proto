@@ -4,7 +4,7 @@ import "common/map_field_entry.proto";
 
 message GoogleLocalizedAlert
 {
-  required string title              = 1;
+  optional string title              = 1;
   optional string body               = 2;
   optional string icon               = 3;
   optional string sound              = 4;
