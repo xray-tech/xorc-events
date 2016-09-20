@@ -22,7 +22,7 @@ message Device
     optional string hwv = 13;
     optional int32 h = 14;
     optional int32 w = 15;
-    optional string ppi = 16;
+    optional int32 ppi = 16;
     optional string connectiontype = 17;
     optional bool jailbroken = 18 [default=false];
 
