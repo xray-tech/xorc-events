@@ -24,22 +24,16 @@ message Timer
 
   optional Action action = 2 [default=CREATE];
 
-  // Id set by the emitter so it can match a TimerExpired message
-  // Expected to be a UUID
   required string correlation_id = 3;
 
-  // Who's interested in getting the TimerExpired...
-  optional string recipient_id = 4;
+  // Payload to be sent
+  optional bytes payload = 4;
 
-  // ... in which universe
-  optional string universe = 5;
-
-  // ... listening which exchange
-  optional string exchange = 6;
+  // to which exchange.
+  optional string exchange = 5;
 
   // timestamp in second from epoch
-  optional uint64 expire_at = 7;
-
+  optional uint64 expire_at = 6;
 }
 
 message TimerExpired
