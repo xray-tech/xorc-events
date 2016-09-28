@@ -8,3 +8,5 @@ CPP_HEADERS = $(PROTO:.proto=.pb.h)
 
 sources: $(CPP_HEADERS)
 	@touch common/__init__.py
+	@touch http/__init__.py
+	@touch notification/__init__.py
