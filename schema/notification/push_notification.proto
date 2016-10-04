@@ -19,5 +19,4 @@ message PushNotification
   required common.Header header = 7;
   optional uint32 retry_count = 8;
   optional uint32 retry_after = 9;
-  optional bool should_retry = 10;
 }
