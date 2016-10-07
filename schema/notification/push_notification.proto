@@ -6,9 +6,10 @@ import "common/header.proto";
 
 message PushNotification
 {
-  required string device_token   = 1;
-  required string application_id = 2;
-  optional string correlation_id = 3;
+  required common.Header header  = 1;
+  required string device_token   = 2;
+  required string application_id = 3;
+  optional string correlation_id = 4;
 
   oneof type
   {
@@ -16,7 +17,6 @@ message PushNotification
     notification.GoogleNotification google = 6;
   }
 
-  required common.Header header = 7;
-  optional uint32 retry_count = 8;
-  optional uint32 retry_after = 9;
+  optional uint32 retry_count = 7;
+  optional uint32 retry_after = 8;
 }
