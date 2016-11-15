@@ -1,7 +1,10 @@
 package http;
 
+import "common/map_field_entry.proto";
+
 message HttpResponse
 {
   optional int32 status_code = 1;
-  optional string response_body = 2;
+  optional bytes response_body = 2;
+  repeated common.MapFieldEntry headers = 3;
 }
