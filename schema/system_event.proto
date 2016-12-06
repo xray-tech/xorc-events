@@ -43,3 +43,19 @@ message TimerExpired
   required string correlation_id = 2;
   optional string universe = 3;
 }
+
+message Profiler
+{
+  required common.Header header = 1;
+
+  enum Action {
+    ATTACH = 1;
+    DETACH = 2;
+    REPORT = 3;
+  }
+
+  optional Action action = 2 [default=ATTACH];
+  optional string universe = 3;
+  optional string pid = 4;
+}
+
