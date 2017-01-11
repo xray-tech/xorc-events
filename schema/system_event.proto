@@ -60,14 +60,13 @@ message Profiler
 }
 
 
+// Requests the Broadcast service to perform an 
+// action for all entities in the specified universe.
 message BroadcastRequest
 {
     required common.Header header = 1;
     required string correlation_id = 2;
     required string universe = 3;
-
-    // 0 ==> broadcast to all entities, other is broadcast to first N entities
-    required int64  limit = 4; 
 
     enum Action
     {
@@ -75,6 +74,6 @@ message BroadcastRequest
         TICK = 2;
     }
 
-    required Action action = 5;
+    required Action action = 4;
 }
 
