@@ -11,6 +11,7 @@ message SystemEvent
 message RuleEngineTick
 {
     required common.Header header = 1;
+    optional string universe = 2;
 }
 
 message Timer
