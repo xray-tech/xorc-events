@@ -37,3 +37,10 @@ message SDKEvent
     optional common.Device device = 4;
 }
 
+message SDKEventBatch
+{
+    required common.Header header = 1;
+    optional SDKEnvironment environment = 2;
+    repeated SDKEventData event = 3;
+    optional common.Device device = 4;
+}
