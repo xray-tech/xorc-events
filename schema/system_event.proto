@@ -78,3 +78,10 @@ message BroadcastRequest
     required Action action = 4;
 }
 
+// Message sent to the Rule Engine to restart a give program id in a given univere.
+message RestartProgram
+{
+    required common.Header header = 1;
+    required string universe = 2;
+    required string pid = 3;
+}
