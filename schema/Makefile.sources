@@ -1,12 +1,15 @@
 
 PROTO := $(wildcard *.proto) $(wildcard */*.proto)
 CPP_HEADERS = $(PROTO:.proto=.pb.h)
+PYTHON_FILES = $(PROTO:.proto=_pb2.py)
 
 %.pb.h %.pb.cc: %.proto
 	protoc -I. -I.. --cpp_out=. $<
+
+%_pb2.py: %.proto
 	protoc -I. -I.. --python_out=. $<
 
-sources: $(CPP_HEADERS)
+sources: $(CPP_HEADERS) $(PYTHON_FILES)
 	@touch common/__init__.py
 	@touch http/__init__.py
 	@touch notification/__init__.py
