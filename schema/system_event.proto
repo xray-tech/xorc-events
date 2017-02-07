@@ -78,3 +78,21 @@ message BroadcastRequest
     required Action action = 4;
 }
 
+// Requests the Broadcast service to send a RestartProgram event
+// for the given program to each entity it can find in the specified
+// universe.
+message RestartProgramRequest
+{
+    required common.Header header = 1;
+    required string correlation_id = 2;
+    required string universe = 3;
+    required string program = 4;
+}
+
+// Message sent to the Rule Engine to restart a give program id in a given univere.
+message RestartProgram
+{
+    required common.Header header = 1;
+    required string universe = 2;
+    required string pid = 3;
+}
