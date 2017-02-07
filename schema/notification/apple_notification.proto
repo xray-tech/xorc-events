@@ -44,6 +44,9 @@ message ApnsResult
     ServiceUnavailable        = 21;
     MissingTopic              = 22;
     MissingCertificate        = 23;
+    InvalidProviderToken      = 24;
+    MissingProviderToken      = 25;
+    ExpiredProviderToken      = 26;
   }
 
   required bool   successful = 1;
