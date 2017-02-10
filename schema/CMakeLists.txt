@@ -17,6 +17,9 @@ set(proto-files
     common/carrier.proto
     common/map_field_entry.proto
 
+    notification/push_notification.proto
+    notification/apple_notification.proto
+    notification/google_notification.proto
     # Test proto file
     dummy.proto
 )
