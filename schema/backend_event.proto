@@ -29,6 +29,7 @@ message EventData
   }
 
   repeated Property properties = 4;
+  optional bool is_in_control_group = 5;
 }
 
 message BackendEvent
