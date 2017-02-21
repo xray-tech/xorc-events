@@ -12,6 +12,7 @@ message RuleEngineTick
 {
     required common.Header header = 1;
     optional string universe = 2;
+    optional bool force_deliver = 3 [default=false];
 }
 
 message Timer
