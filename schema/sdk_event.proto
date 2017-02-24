@@ -27,6 +27,9 @@ message SDKEventData
   }
 
   repeated Property properties = 6;
+
+  // 1 == true, 0 == false
+  optional int32 is_in_control_group = 7 [default = 0];
 }
 
 message SDKEvent
