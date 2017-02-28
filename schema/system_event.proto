@@ -73,9 +73,10 @@ message BroadcastRequest
     {
         NOOP = 1;
         TICK = 2;
-    }
+    } 
 
     required Action action = 4;
+    optional string program = 5;
 }
 
 // Requests the Broadcast service to send a RestartProgram event
