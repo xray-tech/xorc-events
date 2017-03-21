@@ -57,14 +57,15 @@ message ApnsResult
 
 message AppleLocalizedAlert
 {
-  required string title          = 1;
-  required string body           = 2;
-  optional string title_loc_key  = 3;
-  repeated string title_loc_args = 4;
-  optional string action_loc_key = 5;
-  optional string loc_key        = 6;
-  repeated string loc_args       = 7;
-  optional string launch_image   = 8;
+  required string title           = 1;
+  required string body            = 2;
+  optional string title_loc_key   = 3;
+  repeated string title_loc_args  = 4;
+  optional string action_loc_key  = 5;
+  optional string loc_key         = 6;
+  repeated string loc_args        = 7;
+  optional string launch_image    = 8;
+  optional bool   mutable_content = 9;
 }
 
 message CustomData
