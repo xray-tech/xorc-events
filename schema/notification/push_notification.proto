@@ -15,9 +15,9 @@ message PushNotification
 
   oneof type
   {
-    notification.AppleNotification  apple  = 5;
-    notification.GoogleNotification google = 6;
-    notification.WebPushResult      web    = 9;
+    notification.AppleNotification      apple  = 5;
+    notification.GoogleNotification     google = 6;
+    notification.WebPushNotification    web    = 9;
   }
 
   optional uint32 retry_count = 7;
