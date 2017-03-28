@@ -1,0 +1,26 @@
+package notification;
+
+import "common/map_field_entry.proto";
+
+message WebPushResult
+{
+  required bool   successful        = 1;
+}
+
+message WebPushNotification
+{
+  optional WebPushResult response   = 1;
+
+  // comes from the device.web_push fields, auth is defined in the top level notifcatoin as the device_token member
+  required string endpoint          = 2;
+  required string p265dh            = 4;
+
+  // json string, determined by the lua site from the campaign definition. Contains the entire payload to send,
+  // including the outer envelope,tracking data, and the actual push data etc.
+  required string payload           = 5;
+
+  // from push_expiry, this gets set as the header.
+  optional int64  ttl               = 6;
+    
+}
+
