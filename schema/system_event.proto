@@ -89,6 +89,8 @@ message RestartProgramRequest
     required string correlation_id = 2;
     required string universe = 3;
     required string program = 4;
+    optional int32 min_cg_perc = 5 [default=0];
+    optional int32 max_cg_perc = 6 [default=100];
 }
 
 // Message sent to the Rule Engine to restart a give program id in a given univere.
