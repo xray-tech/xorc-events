@@ -2,6 +2,8 @@ package notification;
 
 import "notification/apple_notification.proto";
 import "notification/google_notification.proto";
+import "notification/webpush_notification.proto";
+
 import "common/header.proto";
 
 message PushNotification
@@ -13,8 +15,9 @@ message PushNotification
 
   oneof type
   {
-    notification.AppleNotification  apple  = 5;
-    notification.GoogleNotification google = 6;
+    notification.AppleNotification      apple  = 5;
+    notification.GoogleNotification     google = 6;
+    notification.WebPushNotification    web    = 9;
   }
 
   optional uint32 retry_count = 7;

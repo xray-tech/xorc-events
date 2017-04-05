@@ -37,4 +37,5 @@ message Device
     optional int32 notification_types = 27;
     optional bool ifa_tracking_enabled = 28;
     optional string orientation = 30;
+    optional string platform = 31;
 }
