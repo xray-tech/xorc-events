@@ -18,7 +18,7 @@ message WebPushNotification
 
   // json string, determined by the lua site from the campaign definition. Contains the entire payload to send,
   // including the outer envelope, tracking data, and the actual push data etc.
-  required string payload           = 4;
+  optional string payload           = 4;
 
   // from push_expiry, this gets set as the TTL header.
   optional int64  ttl               = 5;
