@@ -74,6 +74,7 @@ message BroadcastRequest
     {
         NOOP = 1;
         TICK = 2;
+        CLEANUP = 3;
     } 
 
     required Action action = 4;
@@ -93,8 +94,16 @@ message RestartProgramRequest
     optional int32 new_cg_perc = 6;
 }
 
-// Message sent to the Rule Engine to restart a give program id in a given univere.
+// Message sent to the Rule Engine to restart a given program id in a given univere.
 message RestartProgram
+{
+    required common.Header header = 1;
+    required string universe = 2;
+    required string pid = 3;
+}
+
+// Message sent to the Rule Engine to perform cleanup actions after a program has been stopped.
+message CleanupProgram
 {
     required common.Header header = 1;
     required string universe = 2;
