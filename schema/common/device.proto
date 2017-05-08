@@ -38,4 +38,5 @@ message Device
     optional bool ifa_tracking_enabled = 28;
     optional string orientation = 30;
     optional string platform = 31;
+    optional string idfv = 32;
 }
