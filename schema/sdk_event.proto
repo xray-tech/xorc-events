@@ -23,7 +23,13 @@ message SDKEventData
   message Property
   {
     required string key = 1;
-    optional string value = 2;
+    // optional string value = 2; // deprecated, don't re-use the index!
+
+    oneof type {
+      string string_value = 3;
+      double number_value = 4;
+      bool bool_value = 5;
+    }
   }
 
   repeated Property properties = 6;
