@@ -11,12 +11,17 @@ message ApnsResult
 {
   enum Status
   {
-    Success        = 0;
-    BadRequest     = 1;
-    Error          = 2;
-    MissingChannel = 3;
-    Timeout        = 4;
-    Unknown        = 5;
+    Success          = 0;
+    BadRequest       = 1;
+    Error            = 2;
+    MissingChannel   = 3;
+    Timeout          = 4;
+    Unknown          = 5;
+    Unregistered     = 6;
+    Forbidden        = 7;
+    MethodNotAllowed = 8;
+    PayloadTooLarge  = 9;
+    TooManyRequests  = 10;
   }
 
   enum Reason {
