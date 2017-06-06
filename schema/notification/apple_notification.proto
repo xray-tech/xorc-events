@@ -26,7 +26,6 @@ message ApnsResult
 
   enum Reason {
     PayloadEmpty              = 0;
-    PayloadTooLarge           = 1;
     BadTopic                  = 2;
     TopicDisallowed           = 3;
     BadMessageId              = 4;
@@ -35,14 +34,10 @@ message ApnsResult
     MissingDeviceToken        = 7;
     BadDeviceToken            = 8;
     DeviceTokenNotForTopic    = 9;
-    Unregistered              = 10;
     DuplicateHeaders          = 11;
     BadCertificateEnvironment = 12;
     BadCertificate            = 13;
-    Forbidden                 = 14;
     BadPath                   = 15;
-    MethodNotAllowed          = 16;
-    TooManyRequests           = 17;
     IdleTimeout               = 18;
     Shutdown                  = 19;
     InternalServerError       = 20;
