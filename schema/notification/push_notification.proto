@@ -22,4 +22,5 @@ message PushNotification
 
   optional uint32 retry_count = 7;
   optional uint32 retry_after = 8;
+  optional string campaign_id = 10;
 }
