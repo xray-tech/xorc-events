@@ -1,5 +1,3 @@
-syntax = "proto2";
-
 package http;
 
 import "common/map_field_entry.proto";

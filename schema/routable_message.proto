@@ -1,5 +1,3 @@
-syntax = "proto2";
-
 package router;
 
 import "common/header.proto";
