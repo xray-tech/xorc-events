@@ -1,5 +1,3 @@
-syntax = "proto2";
-
 package common;
 
 import "common/carrier.proto";

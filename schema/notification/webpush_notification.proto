@@ -1,5 +1,3 @@
-syntax = "proto2";
-
 package notification;
 
 import "common/map_field_entry.proto";
