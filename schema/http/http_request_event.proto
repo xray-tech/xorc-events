@@ -29,4 +29,6 @@ message HttpRequestEvent
   optional string universe = 12;
   optional string exchange = 13;
   optional string response_recipient_id = 14;
+  optional string application_id = 15;
+  optional string campaign_id = 16;
 }
