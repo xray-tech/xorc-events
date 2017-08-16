@@ -39,4 +39,5 @@ message Device
     optional string orientation = 30;
     optional string platform = 31;
     optional string idfv = 32;
+    optional string mdm = 33;
 }
