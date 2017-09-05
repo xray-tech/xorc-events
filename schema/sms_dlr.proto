@@ -1,0 +1,29 @@
+package sms;
+
+import "common/header.proto";
+
+message SmsDlr
+{
+    enum State
+    {
+        Delivered = 0;
+        Undeliverable = 1;
+        Expired = 2;
+        Rejected = 3;
+        Unknown = 4;
+    }
+
+    required common.Header header = 1;
+    required State state = 2;
+    optional string app_id = 3;
+    optional string campaign_id = 4;
+    optional string entity_id = 5;
+    optional string workflow_id = 6;
+    optional string action_id = 7;
+    optional string msg_id = 8;
+    optional string timestamp = 9;
+    optional string reason_code = 10;
+    optional string mcc = 11;
+    optional string mnc = 12;
+    optional string mdn = 13;
+};
