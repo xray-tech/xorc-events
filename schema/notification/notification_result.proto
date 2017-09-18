@@ -1,0 +1,16 @@
+package notification;
+
+import "common/header.proto";
+
+message NotificationResult
+{
+    enum Error
+    {
+        Other = 1;
+        Unsubscribed = 2;
+    }
+
+    required common.Header header = 1;
+    required bool successful = 2;
+    optional Error error = 3;
+}
