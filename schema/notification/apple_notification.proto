@@ -47,6 +47,7 @@ message ApnsResult
     InvalidProviderToken      = 24;
     MissingProviderToken      = 25;
     ExpiredProviderToken      = 26;
+    Nothing                   = 27;
   }
 
   required bool   successful = 1;
