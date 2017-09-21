@@ -25,4 +25,5 @@ message PushNotification
   optional string campaign_id = 10;
   optional string exchange = 11;
   optional string response_recipient_id = 12;
+  optional string universe = 13;
 }
