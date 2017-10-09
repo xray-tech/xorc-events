@@ -12,7 +12,8 @@ message NotificationResult
 
     required common.Header header = 1;
     required bool successful = 2;
-    optional Error error = 3;
-    optional string universe = 4;
-    optional string reason = 5;
+    required string correlation_id = 3;
+    optional Error error = 4;
+    optional string universe = 5;
+    optional string reason = 6;
 }
