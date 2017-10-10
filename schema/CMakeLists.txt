@@ -21,6 +21,7 @@ set(proto-files
     notification/apple_notification.proto
     notification/google_notification.proto
     notification/webpush_notification.proto
+    notification/notification_result.proto
     # Test proto file
     dummy.proto
 )
