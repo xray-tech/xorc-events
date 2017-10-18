@@ -16,4 +16,5 @@ message NotificationResult
     optional Error error = 4;
     optional string universe = 5;
     optional string reason = 6;
+    required bool delete_user = 7;
 }
