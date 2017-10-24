@@ -37,3 +37,25 @@ message Dummy {
     Internal oneof_internal = 18;
   }
 }
+
+// The following message is for testing encoding/interop between the lua-pb library
+// and the rest of the protobuf world (e.g. C++, java).
+
+// NB: Variable length integers can use zigzag encoding to reduce space used
+// to encode the value. From https://developers.google.com/protocol-buffers/docs/encoding
+// If you use int32 or int64 as the type for a negative number, the resulting 
+// varint is always ten bytes long – it is, effectively, treated like a very large 
+// unsigned integer. If you use one of the signed types, the resulting varint
+// uses ZigZag encoding, which is much more efficient. 
+
+message Test64BitIntegers
+{ 
+  // variable length integers. 
+  optional int64  standard_ = 1;
+  optional uint64 unsigned_ = 2;
+  optional sint64 signed_   = 3;
+    
+  // fixed length, will occupy 64 bits regardless
+  optional sfixed64 signed_fixed_ = 4;
+  optional fixed64  fixed_ = 5;
+} 
