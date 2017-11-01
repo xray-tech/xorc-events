@@ -5,17 +5,23 @@ import "common/map_field_entry.proto";
 message WebPushResult
 {
     enum Error {
-        Unspecified      = 1;
-        Unauthorized     = 2;
-        BadRequest       = 3;
-        ServerError      = 4;
-        NotImplemented   = 5;
-        InvalidUri       = 6;
-        TimeoutError     = 7;
-        EndpointNotValid = 8;
-        EndpointNotFound = 9;
-        PayloadTooLarge  = 10;
-        TlsError         = 11;
+        Unspecified        = 1;
+        Unauthorized       = 2;
+        BadRequest         = 3;
+        ServerError        = 4;
+        NotImplemented     = 5;
+        InvalidUri         = 6;
+        TimeoutError       = 7;
+        EndpointNotValid   = 8;
+        EndpointNotFound   = 9;
+        PayloadTooLarge    = 10;
+        TlsError           = 11;
+        InvalidPackageName = 12;
+        InvalidTtl         = 13;
+        MissingCryptoKeys  = 14;
+        InvalidCryptoKeys  = 15;
+        InvalidResponse    = 16;
+        Other              = 17;
     }
 
     required bool   successful = 1;
