@@ -1,0 +1,34 @@
+package notification;
+
+enum ConnectionEndpoint {
+  Production = 1;
+  Sandbox    = 2;
+}
+
+message TokenConfig
+{
+  required ConnectionEndpoint endpoint = 1;
+  required bytes              pkcs8    = 2;
+  required string             key_id   = 3;
+  required string             team_id  = 4;
+}
+
+message CertificateConfig
+{
+  required ConnectionEndpoint endpoint = 1;
+  required bytes              pkcs12   = 2;
+  required string             password = 3;
+}
+
+message AppleConfig
+{
+  required string app_id     = 1;
+  optional string apns_topic = 2;
+
+  oneof connection
+  {
+    TokenConfig       token       = 1;
+    CertificateConfig certificate = 2;
+    bool              deleted     = 3;
+  }
+}
