@@ -1,0 +1,7 @@
+package notification;
+
+message GoogleConfig
+{
+  required string application_id = 1;
+  required string api_key = 2;
+}
