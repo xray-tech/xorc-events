@@ -1,0 +1,13 @@
+package notification;
+
+message WebPushConfig
+{
+  required string application_id = 1;
+
+  oneof api_key
+  {
+    string fcm_api_key     = 2;
+    bool   no_fcm_api_key  = 3;
+    bool   deleted         = 4;
+  }
+}

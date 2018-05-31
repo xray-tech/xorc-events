@@ -3,5 +3,10 @@ package notification;
 message GoogleConfig
 {
   required string application_id = 1;
-  required string api_key = 2;
+
+  oneof api_key
+  {
+    string fcm_api_key = 2;
+    bool   deleted     = 3;
+  }
 }
