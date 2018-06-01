@@ -22,13 +22,14 @@ message CertificateConfig
 
 message AppleConfig
 {
-  required string app_id     = 1;
-  optional string apns_topic = 2;
+  required string             application_id = 1;
+  required string             apns_topic     = 2;
+  required ConnectionEndpoint endpoint       = 3;
 
   oneof connection
   {
-    TokenConfig       token       = 1;
-    CertificateConfig certificate = 2;
-    bool              deleted     = 3;
+    TokenConfig       token       = 4;
+    CertificateConfig certificate = 5;
+    bool              deleted     = 6;
   }
 }
