@@ -1,0 +1,17 @@
+package notification;
+
+import "common/header.proto";
+import "notification/push_notification.proto";
+
+message PushResult
+{
+  required common.Header                 header       = 1;
+  required notification.PushNotification notification = 2;
+
+  oneof response_action
+  {
+    bool   none               = 3;
+    bool   unsubscribe_entity = 4;
+    uint32 retry_in           = 5;
+  }
+}
