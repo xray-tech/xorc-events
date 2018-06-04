@@ -1,0 +1,48 @@
+package crm;
+
+message IosToken
+{
+  required bytes              pkcs8   = 1;
+  required string             key_id  = 2;
+  required string             team_id = 3;
+  optional string             secret  = 4;
+}
+
+message IosCertificate
+{
+  required bytes              pkcs12   = 1;
+  required string             password = 2;
+  optional string             secret   = 3;
+}
+
+message IosApplication
+{
+  required string             apns_topic = 1;
+  required ConnectionEndpoint endpoint   = 2;
+  optional string             secret     = 3;
+
+  oneof connection
+  {
+    IosToken       token       = 4;
+    IosCertificate certificate = 5;
+  }
+}
+
+message AndroidApplication
+{
+  required string fcm_api_key = 1;
+}
+
+message WebApplication
+{
+  optional string fcm_api_key = 1;
+}
+
+message Application
+{
+  required string             id      = 1;
+  optional string             token   = 2;
+  optional IosApplication     ios     = 3;
+  optional AndroidApplication android = 4;
+  optional WebApplication     web     = 5;
+}
