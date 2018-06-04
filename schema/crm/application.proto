@@ -17,6 +17,11 @@ message IosCertificate
 
 message IosApplication
 {
+  enum ConnectionEndpoint {
+    Production = 1;
+    Sandbox    = 2;
+  }
+
   required string             apns_topic = 1;
   required ConnectionEndpoint endpoint   = 2;
   optional string             secret     = 3;
