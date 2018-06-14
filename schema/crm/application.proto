@@ -1,4 +1,7 @@
+syntax = "proto2";
 package crm;
+
+import "common/header.proto";
 
 message IosToken
 {
@@ -45,9 +48,10 @@ message WebApplication
 
 message Application
 {
-  required string             id      = 1;
-  optional string             token   = 2;
-  optional IosApplication     ios     = 3;
-  optional AndroidApplication android = 4;
-  optional WebApplication     web     = 5;
+  required common.Header      header  = 1;
+  required string             id      = 2;
+  optional string             token   = 3;
+  optional IosApplication     ios     = 4;
+  optional AndroidApplication android = 5;
+  optional WebApplication     web     = 6;
 }
