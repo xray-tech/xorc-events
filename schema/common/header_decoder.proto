@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+import "common/header.proto";
+package common;
+
+message HeaderWrapper {
+    required common.Header header = 1;
+}
