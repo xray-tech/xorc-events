@@ -1,0 +1,284 @@
+syntax = "proto2";
+
+package crm;
+
+import "common/header.proto";
+
+message FrequencyCap
+{
+  enum ActionType
+  {
+    PushMessages    = 1;
+    InAppMessages   = 2;
+    WebPushMessages = 3;
+    DataPushes      = 4;
+    SmsMessages     = 5;
+    EmailMessages   = 6;
+    All             = 7;
+  }
+
+  required uint32     cap_value   = 1;
+  required Time       timeframe   = 2;
+  required ActionType action_type = 3;
+}
+
+message IosToken
+{
+  required bytes  pkcs8   = 1;
+  required string key_id  = 2;
+  required string team_id = 3;
+  optional string secret  = 4;
+}
+
+message IosCertificate
+{
+  required bytes  pkcs12    = 1;
+  required string password  = 2;
+  optional string secret    = 3;
+  required uint64 expiry_at = 4;
+}
+
+message IosConfig
+{
+  enum ConnectionEndpoint {
+    Production = 1;
+    Sandbox    = 2;
+  }
+
+  required string             apns_topic     = 1;
+  required ConnectionEndpoint endpoint       = 2;
+  required string             sdk_api_secret = 3;
+
+  oneof connection
+  {
+    IosToken       token       = 4;
+    IosCertificate certificate = 5;
+  }
+
+  required bool   enabled      = 6;
+  optional string app_store_id = 7;
+  required string created_at   = 8;
+  required Person created_by   = 9;
+  optional string updated_at   = 10;
+  optional Person updated_by   = 11;
+  required bool   verified     = 12;
+}
+
+message FcmConfig
+{
+  required string fcm_api_key = 1;
+}
+
+message AndroidConfig
+{
+  required FcmConfig fcm_config     = 1;
+  required string    sdk_api_secret = 2;
+  required string    created_at     = 3;
+  required Person    created_by     = 4;
+  optional string    updated_at     = 5;
+  optional Person    updated_by     = 6;
+  required bool      verified       = 7;
+  required bool      enabled        = 8;
+}
+
+message WebConfig
+{
+  optional FcmConfig fcm_config     = 1;
+  required string    sdk_api_secret = 2;
+  required string    created_at     = 3;
+  required Person    created_by     = 4;
+  optional string    updated_at     = 5;
+  optional Person    updated_by     = 6;
+  required bool      verified       = 7;
+  required bool      enabled        = 8;
+  optional string    icon_url       = 9;
+  optional string    canonical_url  = 10;
+}
+
+message DimocoConfig
+{
+  required string password = 1;
+}
+
+message SmsConfig
+{
+  required bool   enabled   = 1;
+  required string app_id    = 2;
+  required string caller_id = 3;
+
+  oneof provider
+  {
+    DimocoConfig dimoco = 4;
+  }
+}
+
+message SendGridConfig
+{
+  required string authorization_token = 1;
+}
+
+message EmailConfig
+{
+  oneof service_provider
+  {
+    SendGridConfig sendgrid = 1;
+  }
+
+  required bool   enabled                = 2;
+  required string default_sender_address = 3;
+  required string default_sender_name    = 4;
+}
+
+message Application
+{
+  enum TargetingCounters {
+    None   = 1;
+    Hourly = 2;
+    Daily  = 3;
+  }
+
+  required common.Header     header                   = 1;
+  required string            id                       = 2;
+  optional string            sdk_token                = 3;
+  optional IosConfig         ios_config               = 4;
+  optional AndroidConfig     android_config           = 5;
+  optional WebConfig         web_config               = 6;
+  optional string            organization             = 7;
+  required string            created_at               = 8;
+  required Person            created_by               = 9;
+  optional string            updated_at               = 10;
+  optional Person            updated_by               = 11;
+  optional string            deleted_at               = 12;
+  repeated FrequencyCap      frequency_caps           = 13;
+  required uint32            control_group_percentage = 14;
+  optional TargetingCounters targeting_counters       = 15;
+  optional SmsConfig         sms_config               = 16;
+  required bool              external_id_grouping     = 17;
+  optional EmailConfig       email_config             = 18;
+}
+
+message Attribute
+{
+  required common.Header header         = 1;
+  required string        application_id = 2;
+  required string        created_at     = 3;
+  required Person        created_by     = 4;
+  optional string        updated_at     = 5;
+  optional Person        updated_by     = 6;
+  optional string        deleted_at     = 7;
+  required bytes         attributes     = 8;
+}
+
+message ReEnter
+{
+  required bool allowed = 1;
+  optional Time after   = 2;
+}
+
+message JsonCampaign
+{
+  required ReEnter re_enter                 = 1;
+  required bool    recheck_targeting        = 2;
+  optional string  schedule_end             = 3;
+  // These are JSON blobs
+  optional bytes   trigger                  = 4;
+  optional bytes   workflows                = 5;
+  optional bytes   targeting                = 6;
+  optional bytes   conversion_goal          = 7;
+  optional bytes   two_step_wait            = 8;
+}
+
+message Campaign {
+  enum Type
+  {
+    Scheduled  = 1;
+    SendNow    = 2;
+    Automation = 3;
+  }
+
+  required common.Header header                   = 1;
+  required string        application_id           = 2;
+  required string        name                     = 3;
+  required Type          type                     = 4;
+  required bool          enabled                  = 5;
+  optional string        schedule                 = 6;
+  required string        created_at               = 7;
+  required Person        created_by               = 8;
+  optional string        updated_at               = 9;
+  optional Person        updated_by               = 10;
+  optional string        deleted_at               = 11;
+  required bool          ignore_frequency_caps    = 12;
+  optional uint32        control_group_percentage = 13;
+  // A model for CRM JSON, leave empty if custom ORC
+  optional JsonCampaign  json_campaign            = 14;
+  // Custom ORC or transpiled JSON
+  optional bytes         orc_campaign             = 15;
+  // Compiled OAM of orc_campaign
+  optional bytes         compiled_oam             = 16;
+}
+
+message Time
+{
+  enum TimeUnit
+  {
+    Minutes = 1;
+    Hours   = 2;
+    Days    = 3;
+    Weeks   = 4;
+  }
+
+  required TimeUnit unit  = 1;
+  required uint64   count = 2;
+}
+
+message Person
+{
+  required string user_id   = 1;
+  required string user_name = 2;
+}
+
+message Cache
+{
+  required uint64 users            = 1;
+  required double users_percentage = 2;
+  optional string cache_updated_at = 3;
+}
+
+message Segment
+{
+  required common.Header header         = 1;
+  required string        application_id = 2;
+  required string        created_at     = 3;
+  required Person        created_by     = 4;
+  optional string        updated_at     = 5;
+  optional Person        updated_by     = 6;
+  optional string        deleted_at     = 7;
+  optional Cache         cache          = 8;
+  required string        name           = 9;
+  required bytes         conditions     = 10;
+}
+
+message Device
+{
+  optional string os              = 1;
+  optional string os_version      = 2;
+  optional string type            = 3;
+  optional string manufacturer    = 4;
+  optional string model           = 5;
+  optional string app_instance_id = 6;
+}
+
+message TestDevice
+{
+  required common.Header header           = 1;
+  required string        application_id   = 2;
+  required string        created_at       = 3;
+  required Person        created_by       = 4;
+  optional string        updated_at       = 5;
+  optional Person        updated_by       = 6;
+  optional string        deleted_at       = 7;
+  optional Device        device           = 8;
+  optional string        ip_hashed_blake2 = 9;
+  optional string        user_id          = 10;
+  optional string        user_name        = 11;
+}
