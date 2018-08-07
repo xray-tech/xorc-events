@@ -1,14 +1,13 @@
 package http;
 
-import "common/map_field_entry.proto";
 import "common/header.proto";
 import "http/http_request.proto";
 
 message HttpResponse
 {
-  required common.Header        header        = 1;
-  required http.HttpRequest     request       = 2;
-  optional int32                status_code   = 3;
-  optional bytes                response_body = 4;
-  repeated common.MapFieldEntry headers       = 5;
+  required common.Header    header        = 1;
+  required http.HttpRequest request       = 2;
+  optional int32            status_code   = 3;
+  optional bytes            response_body = 4;
+  map<string, string>       headers       = 5;
 }
