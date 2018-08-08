@@ -1,9 +1,10 @@
 package router;
 
-import "common/header.proto";
-
 message RoutableMessage
 {
-    required common.Header header = 1;
-}
+  message Header {
+    required string type = 4;
+  }
 
+  required Header header = 1;
+}

@@ -1,0 +1,21 @@
+package xray.events;
+
+import "common/rpc.proto";
+
+message TimerCreate
+{
+  required common.Request header = 1;
+
+  // timestamp in second from epoch
+  required uint64 expire_at = 6;
+}
+
+message TimerCancel
+{
+  required common.Request header = 1;
+}
+
+message TimerExpired
+{
+  required common.Response header = 1;
+}

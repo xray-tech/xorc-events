@@ -15,37 +15,6 @@ message RuleEngineTick
     optional bool force_deliver = 3 [default=false];
 }
 
-message Timer
-{
-  required common.Header header = 1;
-
-  enum Action {
-    CREATE = 1;
-    CANCEL = 2;
-  }
-
-  optional Action action = 2 [default=CREATE];
-
-  required string correlation_id = 3;
-
-  // Payload to be sent
-  optional bytes payload = 4;
-
-  // to which exchange.
-  optional string exchange = 5;
-
-  // timestamp in second from epoch
-  optional uint64 expire_at = 6;
-}
-
-message TimerExpired
-{
-  required common.Header header = 1;
-
-  required string correlation_id = 2;
-  optional string universe = 3;
-}
-
 message Profiler
 {
   required common.Header header = 1;

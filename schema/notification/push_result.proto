@@ -1,12 +1,10 @@
 package notification;
 
-import "common/header.proto";
-import "notification/push_notification.proto";
+import "common/rpc.proto";
 
 message PushResult
 {
-  required common.Header                 header       = 1;
-  required notification.PushNotification notification = 2;
+  required common.Response header = 1;
 
   oneof response_action
   {

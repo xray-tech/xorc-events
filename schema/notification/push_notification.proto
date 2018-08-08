@@ -3,15 +3,13 @@ package notification;
 import "notification/apple_notification.proto";
 import "notification/google_notification.proto";
 import "notification/webpush_notification.proto";
-import "common/header.proto";
+import "common/rpc.proto";
 
 message PushNotification
 {
-  required common.Header        header         = 1;
+  required common.Request       header         = 1;
   required string               device_token   = 2;
   required string               universe       = 3;
-  required string               correlation_id = 4;
-  map<string, string>           context        = 5;
 
   oneof type
   {

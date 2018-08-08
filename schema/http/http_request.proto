@@ -1,7 +1,6 @@
 package http;
 
-import "common/map_field_entry.proto";
-import "common/header.proto";
+import "common/rpc.proto";
 
 message HttpRequest
 {
@@ -14,13 +13,11 @@ message HttpRequest
     OPTIONS = 5;
   }
 
-  required common.Header        header       = 1;
+  required common.Request       header       = 1;
   map<string, string>           params       = 2;
   map<string, string>           headers      = 3;
-  map<string, string>           context      = 4;
   optional HttpVerb             request_type = 5 [default = GET];
   required string               uri          = 6;
   optional string               body         = 7;
   optional uint64               timeout      = 8;
-  required string               universe     = 9;
 }
