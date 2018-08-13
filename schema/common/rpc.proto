@@ -1,12 +1,9 @@
 package common;
-// This is fundamental brick in our inter services messaging.
+// This is a fundamental brick in our inter-services messaging.
 //
-// We use it to
-// implement asynchronous request-response paradigm. Request and Response here
-// describes headers.
-//
-// Each actual request message and response message SHOULD
-// contains field `header` of type Request or Response
+// We use it to implement asynchronous request-response paradigm. Each actual
+// request message and response message SHOULD contain field `header` of type
+// Request or Response respectively
 
 message Request {
   required string type = 4;
@@ -14,7 +11,8 @@ message Request {
   // SpanContext in TEXT_MAP Format for Opentracing enabled tracers
   map<string, string> context = 2;
 
-  // If set call side expects response, if not it's fully asynchronous request
+  // If is set call side expects a response, if not it's fully asynchronous
+  // request
   optional string correlation_id = 3;
 }
 
