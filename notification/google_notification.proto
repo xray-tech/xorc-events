@@ -1,0 +1,48 @@
+package notification;
+
+message GoogleLocalizedAlert
+{
+  optional string     title              = 1;
+  optional string     body               = 2;
+  optional string     icon               = 3;
+  optional string     sound              = 4;
+  optional string     badge              = 5;
+  optional string     tag                = 6;
+  optional string     color              = 7;
+  optional string     click_action       = 8;
+  optional string     body_loc_key       = 9;
+  repeated string     body_loc_args      = 10;
+  optional string     title_loc_key      = 11;
+  repeated string     title_loc_args     = 12;
+  map<string, string> data               = 13;
+}
+
+message GoogleMessage
+{
+  map<string, string> data = 1;
+}
+
+message GoogleNotification
+{
+  enum Priority
+  {
+    Normal = 1;
+    High   = 2;
+  }
+
+  repeated string      registration_ids        = 1;
+  optional string      collapse_key            = 2;
+  optional Priority    priority                = 3;
+  optional bool        content_available       = 4;
+  optional bool        delay_while_idle        = 5;
+  optional int32       time_to_live            = 6;
+  optional string      restricted_package_name = 7;
+  optional bool        dry_run                 = 8;
+
+  oneof type
+  {
+    GoogleMessage        message   = 9;
+    GoogleLocalizedAlert localized = 10;
+  }
+}
+

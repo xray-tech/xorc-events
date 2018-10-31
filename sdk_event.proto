@@ -1,0 +1,57 @@
+package events;
+
+import "common/header.proto";
+import "common/device.proto";
+
+message SDKEnvironment
+{
+  optional string sdk_version = 1;
+  optional string app_version = 2;
+  optional string app_store_id = 3;
+  optional string app_id = 4;
+  optional string app_instance_id = 5;
+}
+
+message SDKEventData
+{
+  optional string id = 1;
+  optional string session_id = 2;
+  optional string timestamp = 3;
+  optional string name = 4;
+  optional string external_user_id = 5;
+
+  message Property
+  {
+    required string key = 1;
+    // optional string value = 2; // deprecated, don't re-use the index!
+
+    oneof type {
+      string string_value = 3;
+      double number_value = 4;
+      bool bool_value = 5;
+    }
+  }
+
+  repeated Property properties = 6;
+
+  // 1 == true, 0 == false
+  optional int32 is_in_control_group = 7 [default = 0];
+  // id used for control groups etc., may be assigned based on external_user_id
+  optional string reference_id = 8;
+}
+
+message SDKEvent
+{
+    required common.Header header = 1;
+    optional SDKEnvironment environment = 2;
+    optional SDKEventData event = 3;
+    optional common.Device device = 4;
+}
+
+message SDKEventBatch
+{
+    required common.Header header = 1;
+    optional SDKEnvironment environment = 2;
+    repeated SDKEventData event = 3;
+    optional common.Device device = 4;
+}

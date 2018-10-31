@@ -1,0 +1,44 @@
+package notification;
+
+message ApnsHeaders
+{
+  optional int64  apns_expiration = 4;
+  optional uint32 apns_priority   = 5;
+  optional string apns_topic      = 6;
+}
+
+message AppleLocalizedAlert
+{
+  required string title           = 1;
+  required string body            = 2;
+  optional string title_loc_key   = 3;
+  repeated string title_loc_args  = 4;
+  optional string action_loc_key  = 5;
+  optional string loc_key         = 6;
+  repeated string loc_args        = 7;
+  optional string launch_image    = 8;
+  optional bool   mutable_content = 9;
+}
+
+message CustomData
+{
+  required string key  = 1;
+  required string body = 2;
+}
+
+message AppleNotification
+{
+  optional ApnsHeaders headers      = 1;
+  optional uint32      badge        = 2;
+  optional string      sound        = 3;
+  optional string      category     = 4;
+
+  oneof type
+  {
+    AppleLocalizedAlert localized = 5;
+    string              plain     = 6;
+    uint32              silent    = 7;
+  }
+
+  optional CustomData   custom_data  = 8;
+}

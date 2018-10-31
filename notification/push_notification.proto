@@ -1,0 +1,20 @@
+package notification;
+
+import "notification/apple_notification.proto";
+import "notification/google_notification.proto";
+import "notification/webpush_notification.proto";
+import "common/rpc.proto";
+
+message PushNotification
+{
+  required common.Request header         = 1;
+  required string         device_token   = 2;
+  required string         universe       = 3;
+
+  oneof type
+  {
+    notification.AppleNotification   apple  = 6;
+    notification.GoogleNotification  google = 7;
+    notification.WebPushNotification web    = 8;
+  }
+}

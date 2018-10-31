@@ -1,0 +1,12 @@
+syntax = "proto2";
+package common;
+
+option java_outer_classname = "Common";
+
+message Header {
+    required int64 created_at = 2;
+    required string source = 3;
+    optional string type = 4;
+    optional string feed = 5;
+    optional string recipient_id = 6;
+}

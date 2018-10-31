@@ -1,0 +1,43 @@
+package common;
+
+import "common/carrier.proto";
+import "common/browser.proto";
+
+// Information relating to a mobile device.
+message Device
+{
+    optional string id = 1;
+    optional string ifa = 2;
+    optional string os = 3;
+    optional string osv = 4;
+    optional string make = 5;
+    optional string manufacturer = 24;
+    optional string brand = 6;
+    optional string model = 7;
+    optional string type = 8;
+    optional Carrier carrier = 9;
+    optional Browser browser = 10; 
+    optional string locale = 11;
+    optional bool dnt = 12 [default=false];
+    optional string hwv = 13;
+    optional int32 h = 14;
+    optional int32 w = 15;
+    optional int32 ppi = 16;
+    optional string connectiontype = 17;
+    optional bool jailbroken = 18 [default=false];
+
+    optional string language = 19;
+    optional string ip = 20;
+    optional string ip_hashed_blake2 = 29;
+    optional string country = 21;
+    optional string city = 22;
+    optional string timezone = 23;
+    optional string name = 25;
+    optional bool notification_registered = 26;
+    optional int32 notification_types = 27;
+    optional bool ifa_tracking_enabled = 28;
+    optional string orientation = 30;
+    optional string platform = 31;
+    optional string idfv = 32;
+    optional string mdn = 33;
+}

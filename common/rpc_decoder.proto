@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+import "common/rpc.proto";
+package common;
+
+message RequestWrapper {
+    required common.Request header = 1;
+}
+
+message ResponseWrapper {
+    required common.Response header = 1;
+}

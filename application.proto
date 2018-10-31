@@ -1,0 +1,122 @@
+syntax = "proto2";
+
+package application;
+
+import "common/rpc.proto";
+
+message FrequencyCap
+{
+  enum ActionType
+  {
+    PushMessages    = 1;
+    InAppMessages   = 2;
+    WebPushMessages = 3;
+    DataPushes      = 4;
+    All             = 7;
+  }
+
+  required uint32     cap_value   = 1;
+  required Time       timeframe   = 2;
+  required ActionType action_type = 3;
+}
+
+enum ConnectionEndpoint {
+  Production = 1;
+  Sandbox    = 2;
+}
+
+message IosToken
+{
+  required bytes              pkcs8      = 1;
+  required string             key_id     = 2;
+  required string             team_id    = 3;
+  required string             apns_topic = 4;
+  required ConnectionEndpoint endpoint   = 5;
+}
+
+message IosCertificate
+{
+  required bytes              pkcs12     = 1;
+  required string             password   = 2;
+  required uint64             expiry_at  = 3;
+  required string             apns_topic = 4;
+  required ConnectionEndpoint endpoint   = 5;
+}
+
+message IosConfig
+{
+  enum ConnectionType
+  {
+    Certificate = 1;
+    Token       = 2;
+  }
+
+  required string         sdk_api_secret  = 1;
+  optional IosToken       token           = 2;
+  optional IosCertificate certificate     = 3;
+  required bool           enabled         = 4;
+  optional string         app_store_id    = 5;
+  required ConnectionType connection_type = 6;
+}
+
+message AndroidConfig
+{
+  optional string fcm_api_key    = 1;
+  required string sdk_api_secret = 2;
+  required bool   enabled        = 3;
+  optional string app_store_id    = 4;
+}
+
+message WebConfig
+{
+  optional string fcm_api_key    = 1;
+  required string sdk_api_secret = 2;
+  required bool   enabled        = 3;
+  optional string icon_url       = 4;
+  optional string canonical_url  = 5;
+}
+
+message Application
+{
+  enum TargetingCounters {
+    None   = 1;
+    Hourly = 2;
+    Daily  = 3;
+  }
+
+  required common.Request    header                   = 1;
+  required string            id                       = 2;
+  optional string            sdk_token                = 3;
+  optional IosConfig         ios_config               = 4;
+  optional AndroidConfig     android_config           = 5;
+  optional WebConfig         web_config               = 6;
+  optional string            organization             = 7;
+  optional string            created_at               = 8;
+  optional Person            created_by               = 9;
+  optional string            updated_at               = 10;
+  optional Person            updated_by               = 11;
+  repeated FrequencyCap      frequency_caps           = 12;
+  optional uint32            control_group_percentage = 13 [default = 0];
+  optional TargetingCounters targeting_counters       = 14;
+  optional bool              external_id_grouping     = 16 [default = false];
+}
+
+message Time
+{
+  enum TimeUnit
+  {
+    Minutes = 1;
+    Hours   = 2;
+    Days    = 3;
+    Weeks   = 4;
+  }
+
+  required TimeUnit unit  = 1;
+  required uint64   count = 2;
+}
+
+message Person
+{
+  required string user_id   = 1;
+  required string user_name = 2;
+}

@@ -1,0 +1,15 @@
+package notification;
+
+import "common/rpc.proto";
+
+message PushResult
+{
+  enum ResponseAction {
+    None = 0;
+    UnsubscribeEntity = 1;
+    Retry = 2;
+  }
+
+  required common.Response header = 1;
+  required ResponseAction response_action = 2;
+}
