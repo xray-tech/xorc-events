@@ -1,0 +1,10 @@
+package router;
+
+message RoutableMessage
+{
+  message Header {
+    required string type = 4;
+  }
+
+  required Header header = 1;
+}
